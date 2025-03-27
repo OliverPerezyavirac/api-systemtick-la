@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Broadcast;
 Broadcast::channel('App.Models.User.{id}', function ($user, $id) {
     return (int) $user->id === (int) $id;
 });
+
+Broadcast::channel('ticket.{ticketId}', function ($user, $ticketId) {
+    return $user->can('view', Ticket::findOrFail($ticketId));
+});
+
+Broadcast::channel('workspace.{workspaceId}', function ($user, $workspaceId) {
+    return $user->workspaces()->where('workspace_id', $workspaceId)->exists();
+});
