@@ -1,0 +1,308 @@
+name: Tags
+description: |-
+
+  Endpoints para gestionar tags en workspaces.
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: 'api/workspaces/{workspace_id}/tags'
+    metadata:
+      groupName: Tags
+      groupDescription: |-
+
+        Endpoints para gestionar tags en workspaces.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Listar tags del workspace.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      workspace_id:
+        name: workspace_id
+        description: 'El ID del workspace.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      workspace_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "data": [
+              {
+                "id": 1,
+                "name": "Urgente",
+                "color": "#FF0000",
+                "created_at": "2023-03-27T23:22:12.000000Z",
+                "updated_at": "2023-03-27T23:22:12.000000Z"
+              }
+            ]
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Bearer {YOUR_AUTH_TOKEN}'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/workspaces/{workspace_id}/tags'
+    metadata:
+      groupName: Tags
+      groupDescription: |-
+
+        Endpoints para gestionar tags en workspaces.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Crear un tag.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      workspace_id:
+        name: workspace_id
+        description: 'El ID del workspace.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      workspace_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'El nombre del tag.'
+        required: true
+        example: '"Urgente"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      color:
+        name: color
+        description: 'El código de color hexadecimal.'
+        required: true
+        example: '"#FF0000"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: '"Urgente"'
+      color: '"#FF0000"'
+    fileParameters: []
+    responses:
+      -
+        status: 201
+        content: |-
+          {
+            "id": 1,
+            "name": "Urgente",
+            "color": "#FF0000",
+            "created_at": "2023-03-27T23:22:12.000000Z",
+            "updated_at": "2023-03-27T23:22:12.000000Z"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Bearer {YOUR_AUTH_TOKEN}'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/workspaces/{workspace_id}/tags/{tag_id}'
+    metadata:
+      groupName: Tags
+      groupDescription: |-
+
+        Endpoints para gestionar tags en workspaces.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Actualizar un tag.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      workspace_id:
+        name: workspace_id
+        description: 'El ID del workspace.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      tag_id:
+        name: tag_id
+        description: 'El ID del tag.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      workspace_id: 1
+      tag_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'El nuevo nombre del tag.'
+        required: true
+        example: '"Muy Urgente"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      color:
+        name: color
+        description: 'El nuevo código de color hexadecimal.'
+        required: true
+        example: '"#FF0000"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: '"Muy Urgente"'
+      color: '"#FF0000"'
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "id": 1,
+            "name": "Muy Urgente",
+            "color": "#FF0000",
+            "created_at": "2023-03-27T23:22:12.000000Z",
+            "updated_at": "2023-03-27T23:22:12.000000Z"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Bearer {YOUR_AUTH_TOKEN}'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/workspaces/{workspace_id}/tags/{tag_id}'
+    metadata:
+      groupName: Tags
+      groupDescription: |-
+
+        Endpoints para gestionar tags en workspaces.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Eliminar un tag.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      workspace_id:
+        name: workspace_id
+        description: 'El ID del workspace.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      tag_id:
+        name: tag_id
+        description: 'El ID del tag.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      workspace_id: 1
+      tag_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 204
+        content: '{}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Bearer {YOUR_AUTH_TOKEN}'
+    controller: null
+    method: null
+    route: null
+    custom: []

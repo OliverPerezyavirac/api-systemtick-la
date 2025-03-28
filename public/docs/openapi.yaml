@@ -1,0 +1,1514 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  '/api/workspaces/{workspace}/tickets/{ticket}/comments':
+    get:
+      summary: 'Listar comentarios de un ticket.'
+      operationId: listarComentariosDeUnTicket
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      content: 'Este es un comentario.'
+                      user_id: 1
+                      created_at: '2023-03-27T23:22:12.000000Z'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        content: 'Este es un comentario.'
+                        user_id: 1
+                        created_at: '2023-03-27T23:22:12.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        content:
+                          type: string
+                          example: 'Este es un comentario.'
+                        user_id:
+                          type: integer
+                          example: 1
+                        created_at:
+                          type: string
+                          example: '2023-03-27T23:22:12.000000Z'
+      tags:
+        - Comentarios
+    post:
+      summary: 'Crear un comentario en un ticket.'
+      operationId: crearUnComentarioEnUnTicket
+      description: ''
+      parameters: []
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  id: 1
+                  content: 'Este es un comentario.'
+                  user_id: 1
+                  created_at: '2023-03-27T23:22:12.000000Z'
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  content:
+                    type: string
+                    example: 'Este es un comentario.'
+                  user_id:
+                    type: integer
+                    example: 1
+                  created_at:
+                    type: string
+                    example: '2023-03-27T23:22:12.000000Z'
+      tags:
+        - Comentarios
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                content:
+                  type: string
+                  description: 'El contenido del comentario.'
+                  example: '"Este es un comentario."'
+                  nullable: false
+                visibility:
+                  type: string
+                  description: ''
+                  example: private
+                  nullable: false
+                  enum:
+                    - public
+                    - private
+              required:
+                - content
+                - visibility
+    parameters:
+      -
+        in: path
+        name: workspace
+        description: 'The workspace.'
+        example: qui
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: ticket
+        description: 'The ticket.'
+        example: nobis
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: ticket_id
+        description: 'El ID del ticket.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/user:
+    get:
+      summary: ''
+      operationId: getApiUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  '/api/workspaces/{workspace}/invite':
+    post:
+      summary: 'Invite a user to a workspace.'
+      operationId: inviteAUserToAWorkspace
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Invitaciones del Workspace'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: hkuphal@example.org
+                  nullable: false
+                role:
+                  type: string
+                  description: ''
+                  example: manager
+                  nullable: false
+                  enum:
+                    - guest
+                    - member
+                    - manager
+              required:
+                - email
+                - role
+      security: []
+    parameters:
+      -
+        in: path
+        name: workspace
+        description: 'The workspace.'
+        example: in
+        required: true
+        schema:
+          type: string
+  '/api/workspaces/invitations/{invitation}/accept':
+    post:
+      summary: 'Accept the specified resource from storage.'
+      operationId: acceptTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Invitaciones del Workspace'
+      security: []
+    parameters:
+      -
+        in: path
+        name: invitation
+        description: 'The invitation.'
+        example: architecto
+        required: true
+        schema:
+          type: string
+  '/api/workspaces/invitations/{invitation}/decline':
+    post:
+      summary: 'Decline the specified resource from storage.'
+      operationId: declineTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Invitaciones del Workspace'
+      security: []
+    parameters:
+      -
+        in: path
+        name: invitation
+        description: 'The invitation.'
+        example: sint
+        required: true
+        schema:
+          type: string
+  /api/notifications:
+    get:
+      summary: 'Listar notificaciones del usuario.'
+      operationId: listarNotificacionesDelUsuario
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      type: App\Notifications\TicketAssigned
+                      data:
+                        ticket_id: 1
+                        message: 'Se te ha asignado un nuevo ticket.'
+                      read_at: null
+                      created_at: '2023-03-27T23:22:12.000000Z'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        type: App\Notifications\TicketAssigned
+                        data:
+                          ticket_id: 1
+                          message: 'Se te ha asignado un nuevo ticket.'
+                        read_at: null
+                        created_at: '2023-03-27T23:22:12.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        type:
+                          type: string
+                          example: App\Notifications\TicketAssigned
+                        data:
+                          type: object
+                          properties:
+                            ticket_id:
+                              type: integer
+                              example: 1
+                            message:
+                              type: string
+                              example: 'Se te ha asignado un nuevo ticket.'
+                        read_at:
+                          type: string
+                          example: null
+                        created_at:
+                          type: string
+                          example: '2023-03-27T23:22:12.000000Z'
+      tags:
+        - Notificaciones
+  '/api/notifications/{id}/read':
+    post:
+      summary: 'Marcar notificación como leída.'
+      operationId: marcarNotificacinComoLeda
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Notificación marcada como leída.'
+                properties:
+                  message:
+                    type: string
+                    example: 'Notificación marcada como leída.'
+      tags:
+        - Notificaciones
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the notification.'
+        example: consectetur
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: notification_id
+        description: 'El ID de la notificación.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/notifications/{id}':
+    delete:
+      summary: 'Eliminar notificación.'
+      operationId: eliminarNotificacin
+      description: ''
+      parameters: []
+      responses:
+        204:
+          description: ''
+      tags:
+        - Notificaciones
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the notification.'
+        example: quasi
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: notification_id
+        description: 'El ID de la notificación.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/notifications/real-time:
+    get:
+      summary: 'Get real-time notifications for the current user.'
+      operationId: getRealTimeNotificationsForTheCurrentUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Notificaciones
+      security: []
+  '/api/workspaces/{workspace_id}/tags':
+    get:
+      summary: 'Listar tags del workspace.'
+      operationId: listarTagsDelWorkspace
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1
+                      name: Urgente
+                      color: '#FF0000'
+                      created_at: '2023-03-27T23:22:12.000000Z'
+                      updated_at: '2023-03-27T23:22:12.000000Z'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        name: Urgente
+                        color: '#FF0000'
+                        created_at: '2023-03-27T23:22:12.000000Z'
+                        updated_at: '2023-03-27T23:22:12.000000Z'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        name:
+                          type: string
+                          example: Urgente
+                        color:
+                          type: string
+                          example: '#FF0000'
+                        created_at:
+                          type: string
+                          example: '2023-03-27T23:22:12.000000Z'
+                        updated_at:
+                          type: string
+                          example: '2023-03-27T23:22:12.000000Z'
+      tags:
+        - Tags
+    post:
+      summary: 'Crear un tag.'
+      operationId: crearUnTag
+      description: ''
+      parameters: []
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  id: 1
+                  name: Urgente
+                  color: '#FF0000'
+                  created_at: '2023-03-27T23:22:12.000000Z'
+                  updated_at: '2023-03-27T23:22:12.000000Z'
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  name:
+                    type: string
+                    example: Urgente
+                  color:
+                    type: string
+                    example: '#FF0000'
+                  created_at:
+                    type: string
+                    example: '2023-03-27T23:22:12.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2023-03-27T23:22:12.000000Z'
+      tags:
+        - Tags
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'El nombre del tag.'
+                  example: '"Urgente"'
+                  nullable: false
+                color:
+                  type: string
+                  description: 'El código de color hexadecimal.'
+                  example: '"#FF0000"'
+                  nullable: false
+              required:
+                - name
+                - color
+    parameters:
+      -
+        in: path
+        name: workspace_id
+        description: 'El ID del workspace.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/workspaces/{workspace_id}/tags/{tag_id}':
+    put:
+      summary: 'Actualizar un tag.'
+      operationId: actualizarUnTag
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  id: 1
+                  name: 'Muy Urgente'
+                  color: '#FF0000'
+                  created_at: '2023-03-27T23:22:12.000000Z'
+                  updated_at: '2023-03-27T23:22:12.000000Z'
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  name:
+                    type: string
+                    example: 'Muy Urgente'
+                  color:
+                    type: string
+                    example: '#FF0000'
+                  created_at:
+                    type: string
+                    example: '2023-03-27T23:22:12.000000Z'
+                  updated_at:
+                    type: string
+                    example: '2023-03-27T23:22:12.000000Z'
+      tags:
+        - Tags
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'El nuevo nombre del tag.'
+                  example: '"Muy Urgente"'
+                  nullable: false
+                color:
+                  type: string
+                  description: 'El nuevo código de color hexadecimal.'
+                  example: '"#FF0000"'
+                  nullable: false
+              required:
+                - name
+                - color
+    delete:
+      summary: 'Eliminar un tag.'
+      operationId: eliminarUnTag
+      description: ''
+      parameters: []
+      responses:
+        204:
+          description: ''
+      tags:
+        - Tags
+    parameters:
+      -
+        in: path
+        name: workspace_id
+        description: 'El ID del workspace.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+      -
+        in: path
+        name: tag_id
+        description: 'El ID del tag.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/tickets/{ticket}/tags':
+    post:
+      summary: 'Asignar tags a un ticket.'
+      operationId: asignarTagsAUnTicket
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - 'Tags de Tickets'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tags:
+                  type: array
+                  description: 'Los IDs de los tags a asignar.'
+                  example:
+                    - 1
+                    - 2
+                    - 3
+                  items:
+                    type: string
+              required:
+                - tags
+    parameters:
+      -
+        in: path
+        name: ticket
+        description: 'The ticket.'
+        example: similique
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: ticket_id
+        description: 'El ID del ticket.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/tickets/{ticket}/tags/{tag}':
+    delete:
+      summary: 'Remover un tag de un ticket.'
+      operationId: removerUnTagDeUnTicket
+      description: ''
+      parameters: []
+      responses:
+        204:
+          description: ''
+      tags:
+        - 'Tags de Tickets'
+    parameters:
+      -
+        in: path
+        name: ticket
+        description: 'The ticket.'
+        example: iste
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: tag
+        description: 'The tag.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+      -
+        in: path
+        name: ticket_id
+        description: 'El ID del ticket.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+      -
+        in: path
+        name: tag_id
+        description: 'El ID del tag a remover.'
+        example: 2
+        required: true
+        schema:
+          type: integer
+  '/api/workspaces/{workspace}/tickets':
+    get:
+      summary: 'Listar tickets.'
+      operationId: listarTickets
+      description: ''
+      parameters:
+        -
+          in: query
+          name: page
+          description: 'Página de resultados.'
+          example: 1
+          required: false
+          schema:
+            type: integer
+            description: 'Página de resultados.'
+            example: 1
+            nullable: false
+        -
+          in: query
+          name: per_page
+          description: 'Número de resultados por página.'
+          example: 10
+          required: false
+          schema:
+            type: integer
+            description: 'Número de resultados por página.'
+            example: 10
+            nullable: false
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - Tickets
+    post:
+      summary: 'Crear ticket.'
+      operationId: crearTicket
+      description: ''
+      parameters: []
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - Tickets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'El título del ticket.'
+                  example: '"Problema con el servidor"'
+                  nullable: false
+                description:
+                  type: string
+                  description: 'La descripción del problema.'
+                  example: '"El servidor no responde"'
+                  nullable: false
+                priority:
+                  type: string
+                  description: ''
+                  example: low
+                  nullable: false
+                  enum:
+                    - low
+                    - medium
+                    - high
+                    - critical
+                category:
+                  type: string
+                  description: ''
+                  example: bug
+                  nullable: false
+                  enum:
+                    - bug
+                    - feature
+                    - support
+                    - other
+                assignee_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the users table.'
+                  example: blanditiis
+                  nullable: false
+              required:
+                - title
+                - priority
+                - category
+                - assignee_id
+    parameters:
+      -
+        in: path
+        name: workspace
+        description: 'The workspace.'
+        example: doloremque
+        required: true
+        schema:
+          type: string
+  '/api/workspaces/{workspace}/tickets/{ticket}':
+    get:
+      summary: 'Mostrar ticket.'
+      operationId: mostrarTicket
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - Tickets
+    patch:
+      summary: 'Actualizar ticket.'
+      operationId: actualizarTicket
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - Tickets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'El nuevo título del ticket.'
+                  example: '"Problema con el servidor actualizado"'
+                  nullable: false
+                description:
+                  type: string
+                  description: ''
+                  example: 'Sapiente voluptas rerum aliquid ut asperiores rerum sequi.'
+                  nullable: false
+                priority:
+                  type: string
+                  description: ''
+                  example: high
+                  nullable: false
+                  enum:
+                    - low
+                    - medium
+                    - high
+                    - critical
+                status:
+                  type: string
+                  description: 'El nuevo estado del ticket.'
+                  example: '"cerrado"'
+                  nullable: false
+                assignee_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the users table.'
+                  example: null
+                  nullable: true
+              required:
+                - description
+                - priority
+    delete:
+      summary: 'Eliminar ticket.'
+      operationId: eliminarTicket
+      description: ''
+      parameters: []
+      responses:
+        204:
+          description: ''
+      tags:
+        - Tickets
+    parameters:
+      -
+        in: path
+        name: workspace
+        description: 'The workspace.'
+        example: quas
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: ticket
+        description: 'The ticket.'
+        example: corrupti
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: id
+        description: 'El ID del ticket.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/workspaces/{workspace}/tickets/{ticket}/assign':
+    post:
+      summary: 'Assign a ticket to a user.'
+      operationId: assignATicketToAUser
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Tickets
+      security: []
+    parameters:
+      -
+        in: path
+        name: workspace
+        description: 'The workspace.'
+        example: sit
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: ticket
+        description: 'The ticket.'
+        example: dolores
+        required: true
+        schema:
+          type: string
+  '/api/workspaces/{workspace}/tickets/{ticket}/status':
+    post:
+      summary: 'Change the status of a ticket.'
+      operationId: changeTheStatusOfATicket
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Tickets
+      security: []
+    parameters:
+      -
+        in: path
+        name: workspace
+        description: 'The workspace.'
+        example: iusto
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: ticket
+        description: 'The ticket.'
+        example: veritatis
+        required: true
+        schema:
+          type: string
+  /api/login:
+    post:
+      summary: 'Iniciar sesión.'
+      operationId: iniciarSesin
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - Usuarios
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'El correo electrónico del usuario.'
+                  example: john@example.com
+                  nullable: false
+                password:
+                  type: string
+                  description: 'La contraseña del usuario.'
+                  example: secret
+                  nullable: false
+              required:
+                - email
+                - password
+      security: []
+  /api/users:
+    get:
+      summary: 'Listar usuarios.'
+      operationId: listarUsuarios
+      description: ''
+      parameters:
+        -
+          in: query
+          name: page
+          description: 'Página de resultados.'
+          example: 1
+          required: false
+          schema:
+            type: integer
+            description: 'Página de resultados.'
+            example: 1
+            nullable: false
+        -
+          in: query
+          name: per_page
+          description: 'Número de resultados por página.'
+          example: 10
+          required: false
+          schema:
+            type: integer
+            description: 'Número de resultados por página.'
+            example: 10
+            nullable: false
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - Usuarios
+    post:
+      summary: 'Crear usuario.'
+      operationId: crearUsuario
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Usuarios
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: nycgqycgkfjfzibbnhmmoypt
+                  nullable: false
+                last_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: vugdufjrsqf
+                  nullable: false
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: runolfsdottir.dan@example.net
+                  nullable: false
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: '}5-bTu'
+                  nullable: false
+                phone:
+                  type: string
+                  description: 'Must not be greater than 20 characters.'
+                  example: exnlyryirysakht
+                  nullable: true
+                address:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ztjtlv
+                  nullable: true
+                avatar_url:
+                  type: string
+                  description: 'Must be a valid URL. Must end with one of <code>.jpg</code>, <code>.jpeg</code>, or <code>.png</code>.'
+                  example: eout.jpg
+                  nullable: true
+              required:
+                - first_name
+                - last_name
+                - email
+                - password
+      security: []
+  '/api/users/{id}':
+    get:
+      summary: 'Mostrar usuario.'
+      operationId: mostrarUsuario
+      description: ''
+      parameters: []
+      responses:
+        404:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'No query results for model [App\Models\User] ipsum'
+                properties:
+                  message:
+                    type: string
+                    example: 'No query results for model [App\Models\User] ipsum'
+      tags:
+        - Usuarios
+    put:
+      summary: 'Actualizar usuario.'
+      operationId: actualizarUsuario
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Usuarios
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: uxmoetgmdr
+                  nullable: false
+                last_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: ohefzwnzukszekskij
+                  nullable: false
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: daron89@example.net
+                  nullable: false
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: 'muW''#L"hXag>3NdLp'
+                  nullable: true
+                phone:
+                  type: string
+                  description: 'Must not be greater than 20 characters.'
+                  example: mjihhvpdxdnxwwg
+                  nullable: true
+                address:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: gvq
+                  nullable: true
+                avatar_url:
+                  type: string
+                  description: 'Must be a valid URL.'
+                  example: 'http://dibbert.com/eveniet-earum-corporis-tempora-cumque-et-libero-reiciendis'
+                  nullable: true
+              required:
+                - first_name
+                - last_name
+                - email
+    delete:
+      summary: 'Eliminar usuario.'
+      operationId: eliminarUsuario
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Usuarios
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the user.'
+        example: ipsum
+        required: true
+        schema:
+          type: string
+  /api/logout:
+    post:
+      summary: 'Cerrar sesión.'
+      operationId: cerrarSesin
+      description: ''
+      parameters: []
+      responses:
+        204:
+          description: ''
+      tags:
+        - Usuarios
+  '/api/workspaces/{workspace}/users':
+    get:
+      summary: 'Listar usuarios del workspace.'
+      operationId: listarUsuariosDelWorkspace
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - 'Usuarios del Workspace'
+    post:
+      summary: 'Agregar usuario al workspace.'
+      operationId: agregarUsuarioAlWorkspace
+      description: ''
+      parameters: []
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - 'Usuarios del Workspace'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                  description: 'El ID del usuario a agregar.'
+                  example: 2
+                  nullable: false
+                role:
+                  type: string
+                  description: 'El rol del usuario en el workspace.'
+                  example: '"member"'
+                  nullable: false
+              required:
+                - user_id
+                - role
+    parameters:
+      -
+        in: path
+        name: workspace
+        description: 'The workspace.'
+        example: recusandae
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: workspace_id
+        description: 'El ID del workspace.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/workspaces/{workspace}/users/{user}':
+    patch:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Usuarios del Workspace'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                role:
+                  type: string
+                  description: ''
+                  example: member
+                  nullable: false
+                  enum:
+                    - guest
+                    - member
+                    - manager
+                    - admin
+              required:
+                - role
+      security: []
+    delete:
+      summary: 'Eliminar usuario del workspace.'
+      operationId: eliminarUsuarioDelWorkspace
+      description: ''
+      parameters: []
+      responses:
+        204:
+          description: ''
+      tags:
+        - 'Usuarios del Workspace'
+    parameters:
+      -
+        in: path
+        name: workspace
+        description: 'The workspace.'
+        example: ipsum
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: user
+        description: 'The user.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/workspaces:
+    get:
+      summary: 'Listar workspaces.'
+      operationId: listarWorkspaces
+      description: ''
+      parameters:
+        -
+          in: query
+          name: page
+          description: 'Página de resultados.'
+          example: 1
+          required: false
+          schema:
+            type: integer
+            description: 'Página de resultados.'
+            example: 1
+            nullable: false
+        -
+          in: query
+          name: per_page
+          description: 'Número de resultados por página.'
+          example: 10
+          required: false
+          schema:
+            type: integer
+            description: 'Número de resultados por página.'
+            example: 10
+            nullable: false
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - Workspaces
+    post:
+      summary: 'Crear workspace.'
+      operationId: crearWorkspace
+      description: ''
+      parameters: []
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - Workspaces
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'El nombre del workspace.'
+                  example: '"Nuevo Workspace"'
+                  nullable: false
+                description:
+                  type: string
+                  description: ''
+                  example: 'Vitae explicabo quisquam aut odio doloremque in necessitatibus.'
+                  nullable: true
+                logo_url:
+                  type: string
+                  description: 'Must be a valid URL.'
+                  example: 'http://www.sipes.com/laborum-qui-non-est-dicta-voluptatem'
+                  nullable: true
+              required:
+                - name
+  '/api/workspaces/{id}':
+    get:
+      summary: 'Mostrar workspace.'
+      operationId: mostrarWorkspace
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - Workspaces
+    put:
+      summary: 'Actualizar workspace.'
+      operationId: actualizarWorkspace
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {  }
+                properties: {  }
+      tags:
+        - Workspaces
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'El nuevo nombre del workspace.'
+                  example: '"Workspace Actualizado"'
+                  nullable: false
+                description:
+                  type: string
+                  description: ''
+                  example: 'Iusto animi ab expedita.'
+                  nullable: true
+                logo_url:
+                  type: string
+                  description: 'Must be a valid URL.'
+                  example: 'https://www.wiegand.com/temporibus-dolor-earum-at-magni'
+                  nullable: true
+              required:
+                - name
+    delete:
+      summary: 'Eliminar workspace.'
+      operationId: eliminarWorkspace
+      description: ''
+      parameters: []
+      responses:
+        204:
+          description: ''
+      tags:
+        - Workspaces
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'El ID del workspace.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: Comentarios
+    description: "\nEndpoints para gestionar comentarios en tickets."
+  -
+    name: Endpoints
+    description: ''
+  -
+    name: 'Invitaciones del Workspace'
+    description: "\nEndpoints para gestionar invitaciones a un workspace."
+  -
+    name: Notificaciones
+    description: "\nEndpoints para gestionar notificaciones de usuarios."
+  -
+    name: Tags
+    description: "\nEndpoints para gestionar tags en workspaces."
+  -
+    name: 'Tags de Tickets'
+    description: "\nEndpoints para gestionar tags en tickets."
+  -
+    name: Tickets
+    description: "\nEndpoints para gestionar tickets."
+  -
+    name: Usuarios
+    description: "\nEndpoints para gestionar usuarios."
+  -
+    name: 'Usuarios del Workspace'
+    description: "\nEndpoints para gestionar usuarios dentro de un workspace."
+  -
+    name: Workspaces
+    description: "\nEndpoints para gestionar workspaces."
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: 'You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.'
+security:
+  -
+    default: []

@@ -6,16 +6,23 @@ use App\Models\Tag;
 use App\Models\Ticket;
 use Illuminate\Http\Request;
 
+/**
+ * @group Tags de Tickets
+ *
+ * Endpoints para gestionar tags en tickets.
+ */
 class TicketTagController extends Controller
 {
     /**
-     * Add tags to a ticket.
+     * Asignar tags a un ticket.
+     * @authenticated
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Ticket  $ticket
-     * @return \Illuminate\Http\Response
+     * @urlParam ticket_id int required El ID del ticket. Example: 1
+     * @bodyParam tags array required Los IDs de los tags a asignar. Example: [1, 2, 3]
+     *
+     * @response 200 {}
      */
-    public function store(Request $request, Ticket $ticket)
+    public function store(Request $request, $ticket_id)
     {
         $validated = $request->validate([
             'tags' => 'required|array',
@@ -23,23 +30,29 @@ class TicketTagController extends Controller
         ]);
 
         $tags = Tag::whereIn('id', $validated['tags'])
-            ->where('workspace_id', $ticket->workspace_id)
+            ->where('workspace_id', $ticket_id)
             ->get();
 
+        $ticket = Ticket::findOrFail($ticket_id);
         $ticket->tags()->syncWithoutDetaching($tags);
 
         return response()->json($ticket->tags);
     }
 
     /**
-     * Remove a tag from a ticket.
+     * Remover un tag de un ticket.
+     * @authenticated
      *
-     * @param  \App\Models\Ticket  $ticket
-     * @param  \App\Models\Tag  $tag
-     * @return \Illuminate\Http\Response
+     * @urlParam ticket_id int required El ID del ticket. Example: 1
+     * @urlParam tag_id int required El ID del tag a remover. Example: 2
+     *
+     * @response 204 {}
      */
-    public function destroy(Ticket $ticket, Tag $tag)
+    public function destroy($ticket_id, $tag_id)
     {
+        $ticket = Ticket::findOrFail($ticket_id);
+        $tag = Tag::findOrFail($tag_id);
+
         if ($tag->workspace_id !== $ticket->workspace_id) {
             return response()->json(['error' => 'Tag does not belong to the same workspace'], 403);
         }

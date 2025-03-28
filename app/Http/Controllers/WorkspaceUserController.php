@@ -8,12 +8,20 @@ use App\Http\Requests\StoreWorkspaceUserRequest;
 use App\Http\Requests\UpdateWorkspaceUserRequest;
 use App\Models\Workspace;
 
+/**
+ * @group Usuarios del Workspace
+ *
+ * Endpoints para gestionar usuarios dentro de un workspace.
+ */
 class WorkspaceUserController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Listar usuarios del workspace.
+     * @authenticated
      *
-     * @return \Illuminate\Http\Response
+     * @urlParam workspace_id int required El ID del workspace. Example: 1
+     *
+     * @response 200{}
      */
     public function index($workspaceId)
     {
@@ -28,10 +36,14 @@ class WorkspaceUserController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Agregar usuario al workspace.
+     * @authenticated
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @urlParam workspace_id int required El ID del workspace. Example: 1
+     * @bodyParam user_id int required El ID del usuario a agregar. Example: 2
+     * @bodyParam role string required El rol del usuario en el workspace. Example: "member"
+     *
+     * @response 201{}
      */
     public function store(StoreWorkspaceUserRequest $request, $workspaceId)
     {
@@ -76,10 +88,13 @@ class WorkspaceUserController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Eliminar usuario del workspace.
+     * @authenticated
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @urlParam workspace_id int required El ID del workspace. Example: 1
+     * @urlParam user_id int required El ID del usuario a eliminar. Example: 2
+     *
+     * @response 204 {}
      */
     public function destroy($workspaceId, $userId)
     {

@@ -5,12 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+/**
+ * @group Notificaciones
+ *
+ * Endpoints para gestionar notificaciones de usuarios.
+ */
 class NotificationController extends Controller
 {
     /**
-     * Display a listing of the notifications.
+     * Listar notificaciones del usuario.
+     * @authenticated
      *
-     * @return \Illuminate\Http\Response
+     * @response 200 {}
      */
     public function index()
     {
@@ -25,14 +31,16 @@ class NotificationController extends Controller
     }
 
     /**
-     * Mark a notification as read.
+     * Marcar notificación como leída.
+     * @authenticated
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @urlParam notification_id int required El ID de la notificación. Example: 1
+     *
+     * @response 200{}
      */
-    public function markAsRead($id)
+    public function markAsRead($notification_id)
     {
-        $notification = Auth::user()->notifications()->findOrFail($id);
+        $notification = Auth::user()->notifications()->findOrFail($notification_id);
         
         if ($notification->read_at !== null) {
             return response()->json(['message' => 'Notification already read'], 400);
@@ -43,28 +51,16 @@ class NotificationController extends Controller
     }
 
     /**
-     * Mark all notifications as read.
+     * Eliminar notificación.
+     * @authenticated
      *
-     * @return \Illuminate\Http\Response
-     */
-    public function markAllAsRead()
-    {
-        Auth::user()->unreadNotifications->markAsRead();
-        
-        return response()->json([
-            'message' => 'All notifications marked as read'
-        ]);
-    }
-
-    /**
-     * Delete a notification.
+     * @urlParam notification_id int required El ID de la notificación. Example: 1
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @response 204 {}
      */
-    public function destroy($id)
+    public function destroy($notification_id)
     {
-        $notification = Auth::user()->notifications()->findOrFail($id);
+        $notification = Auth::user()->notifications()->findOrFail($notification_id);
         $notification->delete();
         
         return response()->json(['message' => 'Notification deleted']);

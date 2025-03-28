@@ -8,27 +8,38 @@ use App\Models\WorkspaceUser;
 use App\Http\Requests\InviteUserRequest;
 use Illuminate\Support\Facades\Auth;
 
+/**
+ * @group Invitaciones del Workspace
+ *
+ * Endpoints para gestionar invitaciones a un workspace.
+ */
 class WorkspaceInvitationController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Listar invitaciones del workspace.
+     * @authenticated
      *
-     * @return \Illuminate\Http\Response
+     * @urlParam workspace_id int required El ID del workspace. Example: 1
+     *
+     * @response 200{}
      */
-    public function index()
+    public function index($workspace_id)
     {
-        //
+        // Lógica para listar invitaciones del workspace
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Enviar invitación a un usuario.
+     * @authenticated
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @urlParam workspace_id int required El ID del workspace. Example: 1
+     * @bodyParam email string required El correo electrónico del usuario a invitar. Example: "invitee@example.com"
+     *
+     * @response 201{}
      */
-    public function store(Request $request)
+    public function store(Request $request, $workspace_id)
     {
-        //
+        // Lógica para enviar una invitación
     }
 
     /**
@@ -55,14 +66,17 @@ class WorkspaceInvitationController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Cancelar invitación.
+     * @authenticated
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @urlParam workspace_id int required El ID del workspace. Example: 1
+     * @urlParam invitation_id int required El ID de la invitación a cancelar. Example: 2
+     *
+     * @response 204 {}
      */
-    public function destroy($id)
+    public function destroy($workspace_id, $invitation_id)
     {
-        //
+        // Lógica para cancelar una invitación
     }
 
     /**

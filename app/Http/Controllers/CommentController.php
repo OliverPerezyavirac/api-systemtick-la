@@ -8,12 +8,20 @@ use App\Models\Ticket;
 use App\Http\Requests\StoreCommentRequest;
 use Illuminate\Support\Facades\Auth;
 
+/**
+ * @group Comentarios
+ *
+ * Endpoints para gestionar comentarios en tickets.
+ */
 class CommentController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Listar comentarios de un ticket.
+     * @authenticated
      *
-     * @return \Illuminate\Http\Response
+     * @urlParam ticket_id int required El ID del ticket. Example: 1
+     *
+     * @response 200 {}
      */
     public function index($workspaceId, $ticketId)
     {
@@ -31,10 +39,13 @@ class CommentController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Crear un comentario en un ticket.
+     * @authenticated
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @urlParam ticket_id int required El ID del ticket. Example: 1
+     * @bodyParam content string required El contenido del comentario. Example: "Este es un comentario."
+     *
+     * @response 201 {}
      */
     public function store(StoreCommentRequest $request, $workspaceId, $ticketId)
     {
@@ -76,12 +87,15 @@ class CommentController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Eliminar un comentario.
+     * @authenticated
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @urlParam ticket_id int required El ID del ticket. Example: 1
+     * @urlParam comment_id int required El ID del comentario. Example: 1
+     *
+     * @response 204 {}
      */
-    public function destroy($id)
+    public function destroy($ticket_id, $comment_id)
     {
         //
     }

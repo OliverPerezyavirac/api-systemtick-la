@@ -10,13 +10,21 @@ use Illuminate\Support\Facades\Auth;
 use App\Events\TicketAssigned;
 use App\Models\User;
 
-
+/**
+ * @group Tickets
+ *
+ * Endpoints para gestionar tickets.
+ */
 class TicketController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Listar tickets.
+     * @authenticated
      *
-     * @return \Illuminate\Http\Response
+     * @queryParam page int Página de resultados. Example: 1
+     * @queryParam per_page int Número de resultados por página. Example: 10
+     *
+     * @response 200 {}
      */
     public function index($workspaceId)
     {
@@ -25,10 +33,13 @@ class TicketController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Crear ticket.
+     * @authenticated
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @bodyParam title string required El título del ticket. Example: "Problema con el servidor"
+     * @bodyParam description string La descripción del problema. Example: "El servidor no responde"
+     *
+     * @response 201 {}
      */
     public function store(StoreTicketRequest $request, $workspaceId)
     {
@@ -46,10 +57,12 @@ class TicketController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Mostrar ticket.
+     * @authenticated
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @urlParam id int required El ID del ticket. Example: 1
+     *
+     * @response 200 {}
      */
     public function show($workspaceId, $ticketId)
     {
@@ -58,11 +71,14 @@ class TicketController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Actualizar ticket.
+     * @authenticated
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @urlParam id int required El ID del ticket. Example: 1
+     * @bodyParam title string El nuevo título del ticket. Example: "Problema con el servidor actualizado"
+     * @bodyParam status string El nuevo estado del ticket. Example: "cerrado"
+     *
+     * @response 200 {}
      */
     public function update(UpdateTicketRequest $request, $workspaceId, $ticketId)
     {
@@ -78,10 +94,12 @@ class TicketController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Eliminar ticket.
+     * @authenticated
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @urlParam id int required El ID del ticket. Example: 1
+     *
+     * @response 204 {}
      */
     public function destroy($workspaceId, $ticketId)
     {
