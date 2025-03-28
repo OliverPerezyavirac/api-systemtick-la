@@ -8,12 +8,21 @@ use App\Http\Requests\User\StoreUserRequest;
 use App\Http\Requests\User\UpdateUserRequest;
 use Illuminate\Support\Facades\Auth;
 
+/**
+ * @group Usuarios
+ *
+ * Endpoints para gestionar usuarios.
+ */
 class UserController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Listar usuarios.
+     * @authenticated
      *
-     * @return \Illuminate\Http\Response
+     * @queryParam page int Página de resultados. Example: 1
+     * @queryParam per_page int Número de resultados por página. Example: 10
+     *
+     * @response 200 
      */
     public function index()
     {
@@ -21,18 +30,13 @@ class UserController extends Controller
         return response()->json($users);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         //
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Crear usuario.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -44,7 +48,8 @@ class UserController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Mostrar usuario.
+     * @authenticated
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -55,19 +60,14 @@ class UserController extends Controller
         return response()->json($user);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         //
     }
 
     /**
-     * Update the specified resource in storage.
+     * Actualizar usuario.
+     * @authenticated
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -81,7 +81,7 @@ class UserController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Eliminar usuario.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -94,10 +94,12 @@ class UserController extends Controller
     }
 
     /**
-     * Login a user and return a token.
+     * Iniciar sesión.
      *
-     * @param Request $request
-     * @return \Illuminate\Http\Response
+     * @bodyParam email string required El correo electrónico del usuario. Example: john@example.com
+     * @bodyParam password string required La contraseña del usuario. Example: secret
+     *
+     * @response 200
      */
     public function login(Request $request)
     {
@@ -114,9 +116,9 @@ class UserController extends Controller
     }
 
     /**
-     * Logout a user and revoke the token.
-     *
-     * @return \Illuminate\Http\Response
+     * Cerrar sesión.
+     * @authenticated
+     * @response 204
      */
     public function logout(Request $request)
     {

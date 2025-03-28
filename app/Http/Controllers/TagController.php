@@ -6,13 +6,20 @@ use App\Models\Tag;
 use App\Models\Workspace;
 use Illuminate\Http\Request;
 
+/**
+ * @group Tags
+ *
+ * Endpoints para gestionar tags en workspaces.
+ */
 class TagController extends Controller
 {
     /**
-     * Display a listing of the tags.
+     * Listar tags del workspace.
+     * @authenticated
      *
-     * @param  \App\Models\Workspace  $workspace
-     * @return \Illuminate\Http\Response
+     * @urlParam workspace_id int required El ID del workspace. Example: 1
+     *
+     * @response 200 {}
      */
     public function index(Workspace $workspace)
     {
@@ -20,11 +27,14 @@ class TagController extends Controller
     }
 
     /**
-     * Store a new tag.
+     * Crear un tag.
+     * @authenticated
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Workspace  $workspace
-     * @return \Illuminate\Http\Response
+     * @urlParam workspace_id int required El ID del workspace. Example: 1
+     * @bodyParam name string required El nombre del tag. Example: "Urgente"
+     * @bodyParam color string required El código de color hexadecimal. Example: "#FF0000"
+     *
+     * @response 201 {}
      */
     public function store(Request $request, Workspace $workspace)
     {
@@ -41,12 +51,15 @@ class TagController extends Controller
     }
 
     /**
-     * Update a tag.
+     * Actualizar un tag.
+     * @authenticated
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Workspace  $workspace
-     * @param  \App\Models\Tag  $tag
-     * @return \Illuminate\Http\Response
+     * @urlParam workspace_id int required El ID del workspace. Example: 1
+     * @urlParam tag_id int required El ID del tag. Example: 1
+     * @bodyParam name string required El nuevo nombre del tag. Example: "Muy Urgente"
+     * @bodyParam color string required El nuevo código de color hexadecimal. Example: "#FF0000"
+     *
+     * @response 200 {}
      */
     public function update(Request $request, Workspace $workspace, Tag $tag)
     {
@@ -63,11 +76,13 @@ class TagController extends Controller
     }
 
     /**
-     * Remove a tag from a workspace.
+     * Eliminar un tag.
+     * @authenticated
      *
-     * @param  \App\Models\Workspace  $workspace
-     * @param  \App\Models\Tag  $tag
-     * @return \Illuminate\Http\Response
+     * @urlParam workspace_id int required El ID del workspace. Example: 1
+     * @urlParam tag_id int required El ID del tag. Example: 1
+     *
+     * @response 204 {}
      */
     public function destroy(Workspace $workspace, Tag $tag)
     {

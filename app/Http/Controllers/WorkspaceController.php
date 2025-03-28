@@ -8,12 +8,21 @@ use App\Http\Requests\Workspace\StoreWorkspaceRequest;
 use App\Http\Requests\Workspace\UpdateWorkspaceRequest;
 use App\Models\WorkspaceUser;
 
+/**
+ * @group Workspaces
+ *
+ * Endpoints para gestionar workspaces.
+ */
 class WorkspaceController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Listar workspaces.
+     * @authenticated
      *
-     * @return \Illuminate\Http\Response
+     * @queryParam page int Página de resultados. Example: 1
+     * @queryParam per_page int Número de resultados por página. Example: 10
+     *
+     * @response 200 {}
      */
     public function index()
     {
@@ -22,10 +31,12 @@ class WorkspaceController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Crear workspace.
+     * @authenticated
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @bodyParam name string required El nombre del workspace. Example: "Nuevo Workspace"
+     *
+     * @response 201{}
      */
     public function store(StoreWorkspaceRequest $request)
     {
@@ -46,10 +57,12 @@ class WorkspaceController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Mostrar workspace.
+     * @authenticated
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @urlParam id int required El ID del workspace. Example: 1
+     *
+     * @response 200{}
      */
     public function show($id)
     {
@@ -58,11 +71,13 @@ class WorkspaceController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Actualizar workspace.
+     * @authenticated
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @urlParam id int required El ID del workspace. Example: 1
+     * @bodyParam name string required El nuevo nombre del workspace. Example: "Workspace Actualizado"
+     *
+     * @response 200{}
      */
     public function update(UpdateWorkspaceRequest $request, $id)
     {
@@ -72,10 +87,12 @@ class WorkspaceController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Eliminar workspace.
+     * @authenticated
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @urlParam id int required El ID del workspace. Example: 1
+     *
+     * @response 204 {}
      */
     public function destroy($id)
     {
