@@ -27,14 +27,14 @@ endpoints:
         name: workspace
         description: 'The workspace.'
         required: true
-        example: doloremque
+        example: odit
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      workspace: doloremque
+      workspace: odit
     queryParameters:
       page:
         name: page
@@ -102,14 +102,14 @@ endpoints:
         name: workspace
         description: 'The workspace.'
         required: true
-        example: quasi
+        example: dolore
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      workspace: quasi
+      workspace: dolore
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -137,7 +137,7 @@ endpoints:
         name: priority
         description: ''
         required: true
-        example: low
+        example: high
         type: string
         enumValues:
           - low
@@ -165,7 +165,7 @@ endpoints:
         name: assignee_id
         description: 'The <code>id</code> of an existing record in the users table.'
         required: true
-        example: blanditiis
+        example: iure
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -174,9 +174,9 @@ endpoints:
     cleanBodyParameters:
       title: '"Problema con el servidor"'
       description: '"El servidor no responde"'
-      priority: low
+      priority: high
       category: bug
-      assignee_id: blanditiis
+      assignee_id: iure
     fileParameters: []
     responses:
       -
@@ -218,7 +218,7 @@ endpoints:
         name: workspace
         description: 'The workspace.'
         required: true
-        example: quas
+        example: sed
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -228,7 +228,7 @@ endpoints:
         name: ticket
         description: 'The ticket.'
         required: true
-        example: corrupti
+        example: ea
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -245,8 +245,8 @@ endpoints:
         nullable: false
         custom: []
     cleanUrlParameters:
-      workspace: quas
-      ticket: corrupti
+      workspace: sed
+      ticket: ea
       id: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -293,7 +293,7 @@ endpoints:
         name: workspace
         description: 'The workspace.'
         required: true
-        example: sed
+        example: illo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -303,7 +303,7 @@ endpoints:
         name: ticket
         description: 'The ticket.'
         required: true
-        example: sint
+        example: totam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -320,8 +320,8 @@ endpoints:
         nullable: false
         custom: []
     cleanUrlParameters:
-      workspace: sed
-      ticket: sint
+      workspace: illo
+      ticket: totam
       id: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -340,7 +340,7 @@ endpoints:
         name: description
         description: ''
         required: true
-        example: 'Sapiente voluptas rerum aliquid ut asperiores rerum sequi.'
+        example: 'Quibusdam aspernatur non ut recusandae aut ut et.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -350,7 +350,7 @@ endpoints:
         name: priority
         description: ''
         required: true
-        example: high
+        example: low
         type: string
         enumValues:
           - low
@@ -382,8 +382,8 @@ endpoints:
         custom: []
     cleanBodyParameters:
       title: '"Problema con el servidor actualizado"'
-      description: 'Sapiente voluptas rerum aliquid ut asperiores rerum sequi.'
-      priority: high
+      description: 'Quibusdam aspernatur non ut recusandae aut ut et.'
+      priority: low
       status: '"cerrado"'
     fileParameters: []
     responses:
@@ -426,7 +426,7 @@ endpoints:
         name: workspace
         description: 'The workspace.'
         required: true
-        example: ea
+        example: saepe
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -436,7 +436,7 @@ endpoints:
         name: ticket
         description: 'The ticket.'
         required: true
-        example: illo
+        example: adipisci
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -453,8 +453,8 @@ endpoints:
         nullable: false
         custom: []
     cleanUrlParameters:
-      workspace: ea
-      ticket: illo
+      workspace: saepe
+      ticket: adipisci
       id: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -500,7 +500,7 @@ endpoints:
         name: workspace
         description: 'The workspace.'
         required: true
-        example: sit
+        example: nesciunt
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -510,15 +510,15 @@ endpoints:
         name: ticket
         description: 'The ticket.'
         required: true
-        example: dolores
+        example: fugiat
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      workspace: sit
-      ticket: dolores
+      workspace: nesciunt
+      ticket: fugiat
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -554,7 +554,7 @@ endpoints:
         name: workspace
         description: 'The workspace.'
         required: true
-        example: iusto
+        example: iure
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -564,15 +564,15 @@ endpoints:
         name: ticket
         description: 'The ticket.'
         required: true
-        example: veritatis
+        example: aspernatur
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      workspace: iusto
-      ticket: veritatis
+      workspace: iure
+      ticket: aspernatur
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

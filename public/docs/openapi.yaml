@@ -20,37 +20,8 @@ paths:
             application/json:
               schema:
                 type: object
-                example:
-                  data:
-                    -
-                      id: 1
-                      content: 'Este es un comentario.'
-                      user_id: 1
-                      created_at: '2023-03-27T23:22:12.000000Z'
-                properties:
-                  data:
-                    type: array
-                    example:
-                      -
-                        id: 1
-                        content: 'Este es un comentario.'
-                        user_id: 1
-                        created_at: '2023-03-27T23:22:12.000000Z'
-                    items:
-                      type: object
-                      properties:
-                        id:
-                          type: integer
-                          example: 1
-                        content:
-                          type: string
-                          example: 'Este es un comentario.'
-                        user_id:
-                          type: integer
-                          example: 1
-                        created_at:
-                          type: string
-                          example: '2023-03-27T23:22:12.000000Z'
+                example: {  }
+                properties: {  }
       tags:
         - Comentarios
     post:
@@ -65,24 +36,8 @@ paths:
             application/json:
               schema:
                 type: object
-                example:
-                  id: 1
-                  content: 'Este es un comentario.'
-                  user_id: 1
-                  created_at: '2023-03-27T23:22:12.000000Z'
-                properties:
-                  id:
-                    type: integer
-                    example: 1
-                  content:
-                    type: string
-                    example: 'Este es un comentario.'
-                  user_id:
-                    type: integer
-                    example: 1
-                  created_at:
-                    type: string
-                    example: '2023-03-27T23:22:12.000000Z'
+                example: {  }
+                properties: {  }
       tags:
         - Comentarios
       requestBody:
@@ -100,7 +55,7 @@ paths:
                 visibility:
                   type: string
                   description: ''
-                  example: private
+                  example: public
                   nullable: false
                   enum:
                     - public
@@ -113,7 +68,7 @@ paths:
         in: path
         name: workspace
         description: 'The workspace.'
-        example: qui
+        example: unde
         required: true
         schema:
           type: string
@@ -121,7 +76,7 @@ paths:
         in: path
         name: ticket
         description: 'The ticket.'
-        example: nobis
+        example: autem
         required: true
         schema:
           type: string
@@ -174,7 +129,7 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: hkuphal@example.org
+                  example: rschulist@example.org
                   nullable: false
                 role:
                   type: string
@@ -194,7 +149,7 @@ paths:
         in: path
         name: workspace
         description: 'The workspace.'
-        example: in
+        example: porro
         required: true
         schema:
           type: string
@@ -213,7 +168,7 @@ paths:
         in: path
         name: invitation
         description: 'The invitation.'
-        example: architecto
+        example: iste
         required: true
         schema:
           type: string
@@ -232,7 +187,7 @@ paths:
         in: path
         name: invitation
         description: 'The invitation.'
-        example: sint
+        example: id
         required: true
         schema:
           type: string
@@ -249,52 +204,8 @@ paths:
             application/json:
               schema:
                 type: object
-                example:
-                  data:
-                    -
-                      id: 1
-                      type: App\Notifications\TicketAssigned
-                      data:
-                        ticket_id: 1
-                        message: 'Se te ha asignado un nuevo ticket.'
-                      read_at: null
-                      created_at: '2023-03-27T23:22:12.000000Z'
-                properties:
-                  data:
-                    type: array
-                    example:
-                      -
-                        id: 1
-                        type: App\Notifications\TicketAssigned
-                        data:
-                          ticket_id: 1
-                          message: 'Se te ha asignado un nuevo ticket.'
-                        read_at: null
-                        created_at: '2023-03-27T23:22:12.000000Z'
-                    items:
-                      type: object
-                      properties:
-                        id:
-                          type: integer
-                          example: 1
-                        type:
-                          type: string
-                          example: App\Notifications\TicketAssigned
-                        data:
-                          type: object
-                          properties:
-                            ticket_id:
-                              type: integer
-                              example: 1
-                            message:
-                              type: string
-                              example: 'Se te ha asignado un nuevo ticket.'
-                        read_at:
-                          type: string
-                          example: null
-                        created_at:
-                          type: string
-                          example: '2023-03-27T23:22:12.000000Z'
+                example: {  }
+                properties: {  }
       tags:
         - Notificaciones
   '/api/notifications/{id}/read':
@@ -310,12 +221,8 @@ paths:
             application/json:
               schema:
                 type: object
-                example:
-                  message: 'Notificación marcada como leída.'
-                properties:
-                  message:
-                    type: string
-                    example: 'Notificación marcada como leída.'
+                example: {  }
+                properties: {  }
       tags:
         - Notificaciones
     parameters:
@@ -323,7 +230,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the notification.'
-        example: consectetur
+        example: sed
         required: true
         schema:
           type: string
@@ -351,7 +258,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the notification.'
-        example: quasi
+        example: commodi
         required: true
         schema:
           type: string
@@ -398,42 +305,8 @@ paths:
             application/json:
               schema:
                 type: object
-                example:
-                  data:
-                    -
-                      id: 1
-                      name: Urgente
-                      color: '#FF0000'
-                      created_at: '2023-03-27T23:22:12.000000Z'
-                      updated_at: '2023-03-27T23:22:12.000000Z'
-                properties:
-                  data:
-                    type: array
-                    example:
-                      -
-                        id: 1
-                        name: Urgente
-                        color: '#FF0000'
-                        created_at: '2023-03-27T23:22:12.000000Z'
-                        updated_at: '2023-03-27T23:22:12.000000Z'
-                    items:
-                      type: object
-                      properties:
-                        id:
-                          type: integer
-                          example: 1
-                        name:
-                          type: string
-                          example: Urgente
-                        color:
-                          type: string
-                          example: '#FF0000'
-                        created_at:
-                          type: string
-                          example: '2023-03-27T23:22:12.000000Z'
-                        updated_at:
-                          type: string
-                          example: '2023-03-27T23:22:12.000000Z'
+                example: {  }
+                properties: {  }
       tags:
         - Tags
     post:
@@ -448,28 +321,8 @@ paths:
             application/json:
               schema:
                 type: object
-                example:
-                  id: 1
-                  name: Urgente
-                  color: '#FF0000'
-                  created_at: '2023-03-27T23:22:12.000000Z'
-                  updated_at: '2023-03-27T23:22:12.000000Z'
-                properties:
-                  id:
-                    type: integer
-                    example: 1
-                  name:
-                    type: string
-                    example: Urgente
-                  color:
-                    type: string
-                    example: '#FF0000'
-                  created_at:
-                    type: string
-                    example: '2023-03-27T23:22:12.000000Z'
-                  updated_at:
-                    type: string
-                    example: '2023-03-27T23:22:12.000000Z'
+                example: {  }
+                properties: {  }
       tags:
         - Tags
       requestBody:
@@ -514,28 +367,8 @@ paths:
             application/json:
               schema:
                 type: object
-                example:
-                  id: 1
-                  name: 'Muy Urgente'
-                  color: '#FF0000'
-                  created_at: '2023-03-27T23:22:12.000000Z'
-                  updated_at: '2023-03-27T23:22:12.000000Z'
-                properties:
-                  id:
-                    type: integer
-                    example: 1
-                  name:
-                    type: string
-                    example: 'Muy Urgente'
-                  color:
-                    type: string
-                    example: '#FF0000'
-                  created_at:
-                    type: string
-                    example: '2023-03-27T23:22:12.000000Z'
-                  updated_at:
-                    type: string
-                    example: '2023-03-27T23:22:12.000000Z'
+                example: {  }
+                properties: {  }
       tags:
         - Tags
       requestBody:
@@ -625,7 +458,7 @@ paths:
         in: path
         name: ticket
         description: 'The ticket.'
-        example: similique
+        example: asperiores
         required: true
         schema:
           type: string
@@ -653,7 +486,7 @@ paths:
         in: path
         name: ticket
         description: 'The ticket.'
-        example: iste
+        example: nulla
         required: true
         schema:
           type: string
@@ -661,7 +494,7 @@ paths:
         in: path
         name: tag
         description: 'The tag.'
-        example: 1
+        example: 8
         required: true
         schema:
           type: integer
@@ -756,7 +589,7 @@ paths:
                 priority:
                   type: string
                   description: ''
-                  example: low
+                  example: high
                   nullable: false
                   enum:
                     - low
@@ -776,7 +609,7 @@ paths:
                 assignee_id:
                   type: string
                   description: 'The <code>id</code> of an existing record in the users table.'
-                  example: blanditiis
+                  example: iure
                   nullable: false
               required:
                 - title
@@ -788,7 +621,7 @@ paths:
         in: path
         name: workspace
         description: 'The workspace.'
-        example: doloremque
+        example: odit
         required: true
         schema:
           type: string
@@ -840,12 +673,12 @@ paths:
                 description:
                   type: string
                   description: ''
-                  example: 'Sapiente voluptas rerum aliquid ut asperiores rerum sequi.'
+                  example: 'Quibusdam aspernatur non ut recusandae aut ut et.'
                   nullable: false
                 priority:
                   type: string
                   description: ''
-                  example: high
+                  example: low
                   nullable: false
                   enum:
                     - low
@@ -880,7 +713,7 @@ paths:
         in: path
         name: workspace
         description: 'The workspace.'
-        example: quas
+        example: sed
         required: true
         schema:
           type: string
@@ -888,7 +721,7 @@ paths:
         in: path
         name: ticket
         description: 'The ticket.'
-        example: corrupti
+        example: ea
         required: true
         schema:
           type: string
@@ -915,7 +748,7 @@ paths:
         in: path
         name: workspace
         description: 'The workspace.'
-        example: sit
+        example: nesciunt
         required: true
         schema:
           type: string
@@ -923,7 +756,7 @@ paths:
         in: path
         name: ticket
         description: 'The ticket.'
-        example: dolores
+        example: fugiat
         required: true
         schema:
           type: string
@@ -942,7 +775,7 @@ paths:
         in: path
         name: workspace
         description: 'The workspace.'
-        example: iusto
+        example: iure
         required: true
         schema:
           type: string
@@ -950,7 +783,7 @@ paths:
         in: path
         name: ticket
         description: 'The ticket.'
-        example: veritatis
+        example: aspernatur
         required: true
         schema:
           type: string
@@ -1049,37 +882,37 @@ paths:
                 first_name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: nycgqycgkfjfzibbnhmmoypt
+                  example: ztrfdsticbytnx
                   nullable: false
                 last_name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: vugdufjrsqf
+                  example: fkdh
                   nullable: false
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: runolfsdottir.dan@example.net
+                  example: doyle.howell@example.org
                   nullable: false
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: '}5-bTu'
+                  example: GG`UAq%WZRkasJ
                   nullable: false
                 phone:
                   type: string
                   description: 'Must not be greater than 20 characters.'
-                  example: exnlyryirysakht
+                  example: vsqfqibfwqydet
                   nullable: true
                 address:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ztjtlv
+                  example: eatbpqmcmxggfloj
                   nullable: true
                 avatar_url:
                   type: string
                   description: 'Must be a valid URL. Must end with one of <code>.jpg</code>, <code>.jpeg</code>, or <code>.png</code>.'
-                  example: eout.jpg
+                  example: iits.jpg
                   nullable: true
               required:
                 - first_name
@@ -1101,11 +934,11 @@ paths:
               schema:
                 type: object
                 example:
-                  message: 'No query results for model [App\Models\User] ipsum'
+                  message: 'No query results for model [App\Models\User] harum'
                 properties:
                   message:
                     type: string
-                    example: 'No query results for model [App\Models\User] ipsum'
+                    example: 'No query results for model [App\Models\User] harum'
       tags:
         - Usuarios
     put:
@@ -1126,37 +959,37 @@ paths:
                 first_name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: uxmoetgmdr
+                  example: rljdsozmusz
                   nullable: false
                 last_name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ohefzwnzukszekskij
+                  example: ynnzjhlbqaiwddgxoe
                   nullable: false
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: daron89@example.net
+                  example: maximus.bogisich@example.com
                   nullable: false
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: 'muW''#L"hXag>3NdLp'
+                  example: 'W''M`P''$ow3T@;%'
                   nullable: true
                 phone:
                   type: string
                   description: 'Must not be greater than 20 characters.'
-                  example: mjihhvpdxdnxwwg
+                  example: gs
                   nullable: true
                 address:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: gvq
+                  example: izapnmfkrysoulsiei
                   nullable: true
                 avatar_url:
                   type: string
                   description: 'Must be a valid URL.'
-                  example: 'http://dibbert.com/eveniet-earum-corporis-tempora-cumque-et-libero-reiciendis'
+                  example: 'http://runolfsson.org/nemo-quas-cupiditate-quia-aperiam-deleniti-itaque'
                   nullable: true
               required:
                 - first_name
@@ -1176,7 +1009,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the user.'
-        example: ipsum
+        example: harum
         required: true
         schema:
           type: string
@@ -1249,7 +1082,7 @@ paths:
         in: path
         name: workspace
         description: 'The workspace.'
-        example: recusandae
+        example: non
         required: true
         schema:
           type: string
@@ -1305,7 +1138,7 @@ paths:
         in: path
         name: workspace
         description: 'The workspace.'
-        example: ipsum
+        example: quisquam
         required: true
         schema:
           type: string
@@ -1313,7 +1146,7 @@ paths:
         in: path
         name: user
         description: 'The user.'
-        example: 1
+        example: 11
         required: true
         schema:
           type: integer
@@ -1387,12 +1220,12 @@ paths:
                 description:
                   type: string
                   description: ''
-                  example: 'Vitae explicabo quisquam aut odio doloremque in necessitatibus.'
+                  example: 'Hic et fugit consequuntur.'
                   nullable: true
                 logo_url:
                   type: string
                   description: 'Must be a valid URL.'
-                  example: 'http://www.sipes.com/laborum-qui-non-est-dicta-voluptatem'
+                  example: 'http://berge.biz/aut-voluptatum-ad-ipsam-maxime-iure-temporibus'
                   nullable: true
               required:
                 - name
@@ -1444,12 +1277,12 @@ paths:
                 description:
                   type: string
                   description: ''
-                  example: 'Iusto animi ab expedita.'
+                  example: 'Omnis eaque eum et aut libero molestiae.'
                   nullable: true
                 logo_url:
                   type: string
                   description: 'Must be a valid URL.'
-                  example: 'https://www.wiegand.com/temporibus-dolor-earum-at-magni'
+                  example: 'http://quitzon.com/omnis-in-et-nisi-et-vero-repellendus'
                   nullable: true
               required:
                 - name

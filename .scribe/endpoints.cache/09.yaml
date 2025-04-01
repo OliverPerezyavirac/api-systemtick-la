@@ -29,7 +29,7 @@ endpoints:
         name: ticket
         description: 'The ticket.'
         required: true
-        example: similique
+        example: asperiores
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -46,7 +46,7 @@ endpoints:
         nullable: false
         custom: []
     cleanUrlParameters:
-      ticket: similique
+      ticket: asperiores
       ticket_id: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -110,7 +110,7 @@ endpoints:
         name: ticket
         description: 'The ticket.'
         required: true
-        example: iste
+        example: nulla
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -120,7 +120,7 @@ endpoints:
         name: tag
         description: 'The tag.'
         required: true
-        example: 1
+        example: 8
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -147,8 +147,8 @@ endpoints:
         nullable: false
         custom: []
     cleanUrlParameters:
-      ticket: iste
-      tag: 1
+      ticket: nulla
+      tag: 8
       ticket_id: 1
       tag_id: 2
     queryParameters: []

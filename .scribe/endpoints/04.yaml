@@ -26,14 +26,14 @@ endpoints:
         name: workspace
         description: 'The workspace.'
         required: true
-        example: in
+        example: porro
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      workspace: in
+      workspace: porro
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -41,7 +41,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: hkuphal@example.org
+        example: rschulist@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -61,7 +61,7 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: hkuphal@example.org
+      email: rschulist@example.org
       role: manager
     fileParameters: []
     responses: []
@@ -94,14 +94,14 @@ endpoints:
         name: invitation
         description: 'The invitation.'
         required: true
-        example: architecto
+        example: iste
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      invitation: architecto
+      invitation: iste
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -137,14 +137,14 @@ endpoints:
         name: invitation
         description: 'The invitation.'
         required: true
-        example: sint
+        example: id
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      invitation: sint
+      invitation: id
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

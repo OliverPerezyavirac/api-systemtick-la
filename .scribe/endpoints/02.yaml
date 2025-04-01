@@ -105,7 +105,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Vitae explicabo quisquam aut odio doloremque in necessitatibus.'
+        example: 'Hic et fugit consequuntur.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -115,7 +115,7 @@ endpoints:
         name: logo_url
         description: 'Must be a valid URL.'
         required: false
-        example: 'http://www.sipes.com/laborum-qui-non-est-dicta-voluptatem'
+        example: 'http://berge.biz/aut-voluptatum-ad-ipsam-maxime-iure-temporibus'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -123,8 +123,8 @@ endpoints:
         custom: []
     cleanBodyParameters:
       name: '"Nuevo Workspace"'
-      description: 'Vitae explicabo quisquam aut odio doloremque in necessitatibus.'
-      logo_url: 'http://www.sipes.com/laborum-qui-non-est-dicta-voluptatem'
+      description: 'Hic et fugit consequuntur.'
+      logo_url: 'http://berge.biz/aut-voluptatum-ad-ipsam-maxime-iure-temporibus'
     fileParameters: []
     responses:
       -
@@ -245,7 +245,7 @@ endpoints:
         name: description
         description: ''
         required: false
-        example: 'Iusto animi ab expedita.'
+        example: 'Omnis eaque eum et aut libero molestiae.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -255,7 +255,7 @@ endpoints:
         name: logo_url
         description: 'Must be a valid URL.'
         required: false
-        example: 'https://www.wiegand.com/temporibus-dolor-earum-at-magni'
+        example: 'http://quitzon.com/omnis-in-et-nisi-et-vero-repellendus'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -263,8 +263,8 @@ endpoints:
         custom: []
     cleanBodyParameters:
       name: '"Workspace Actualizado"'
-      description: 'Iusto animi ab expedita.'
-      logo_url: 'https://www.wiegand.com/temporibus-dolor-earum-at-magni'
+      description: 'Omnis eaque eum et aut libero molestiae.'
+      logo_url: 'http://quitzon.com/omnis-in-et-nisi-et-vero-repellendus'
     fileParameters: []
     responses:
       -
