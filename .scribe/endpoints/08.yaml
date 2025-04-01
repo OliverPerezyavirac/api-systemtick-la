@@ -43,18 +43,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: |-
-          {
-            "data": [
-              {
-                "id": 1,
-                "name": "Urgente",
-                "color": "#FF0000",
-                "created_at": "2023-03-27T23:22:12.000000Z",
-                "updated_at": "2023-03-27T23:22:12.000000Z"
-              }
-            ]
-          }
+        content: '{}'
         headers: []
         description: ''
         custom: []
@@ -129,14 +118,7 @@ endpoints:
     responses:
       -
         status: 201
-        content: |-
-          {
-            "id": 1,
-            "name": "Urgente",
-            "color": "#FF0000",
-            "created_at": "2023-03-27T23:22:12.000000Z",
-            "updated_at": "2023-03-27T23:22:12.000000Z"
-          }
+        content: '{}'
         headers: []
         description: ''
         custom: []
@@ -222,14 +204,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: |-
-          {
-            "id": 1,
-            "name": "Muy Urgente",
-            "color": "#FF0000",
-            "created_at": "2023-03-27T23:22:12.000000Z",
-            "updated_at": "2023-03-27T23:22:12.000000Z"
-          }
+        content: '{}'
         headers: []
         description: ''
         custom: []

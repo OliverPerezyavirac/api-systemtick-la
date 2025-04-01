@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "02ea401d-a5a9-4605-ae21-806ef8233018",
+        "_postman_id": "861d1167-a6b2-4358-8a27-ed70deb88bad",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -31,13 +31,13 @@
                                 {
                                     "id": "workspace",
                                     "key": "workspace",
-                                    "value": "qui",
+                                    "value": "unde",
                                     "description": "The workspace."
                                 },
                                 {
                                     "id": "ticket",
                                     "key": "ticket",
-                                    "value": "nobis",
+                                    "value": "autem",
                                     "description": "The ticket."
                                 },
                                 {
@@ -66,7 +66,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\n  \"data\": [\n    {\n      \"id\": 1,\n      \"content\": \"Este es un comentario.\",\n      \"user_id\": 1,\n      \"created_at\": \"2023-03-27T23:22:12.000000Z\"\n    }\n  ]\n}",
+                            "body": "{}",
                             "name": ""
                         }
                     ]
@@ -83,13 +83,13 @@
                                 {
                                     "id": "workspace",
                                     "key": "workspace",
-                                    "value": "omnis",
+                                    "value": "dolores",
                                     "description": "The workspace."
                                 },
                                 {
                                     "id": "ticket",
                                     "key": "ticket",
-                                    "value": "rerum",
+                                    "value": "commodi",
                                     "description": "The ticket."
                                 },
                                 {
@@ -113,7 +113,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"content\":\"\\\"Este es un comentario.\\\"\",\"visibility\":\"private\"}"
+                            "raw": "{\"content\":\"\\\"Este es un comentario.\\\"\",\"visibility\":\"public\"}"
                         },
                         "description": ""
                     },
@@ -121,7 +121,7 @@
                         {
                             "header": [],
                             "code": 201,
-                            "body": "{\n  \"id\": 1,\n  \"content\": \"Este es un comentario.\",\n  \"user_id\": 1,\n  \"created_at\": \"2023-03-27T23:22:12.000000Z\"\n}",
+                            "body": "{}",
                             "name": ""
                         }
                     ]
@@ -198,7 +198,7 @@
                                 {
                                     "id": "workspace",
                                     "key": "workspace",
-                                    "value": "in",
+                                    "value": "porro",
                                     "description": "The workspace."
                                 }
                             ]
@@ -216,7 +216,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"hkuphal@example.org\",\"role\":\"manager\"}"
+                            "raw": "{\"email\":\"rschulist@example.org\",\"role\":\"manager\"}"
                         },
                         "description": "",
                         "auth": {
@@ -237,7 +237,7 @@
                                 {
                                     "id": "invitation",
                                     "key": "invitation",
-                                    "value": "architecto",
+                                    "value": "iste",
                                     "description": "The invitation."
                                 }
                             ]
@@ -273,7 +273,7 @@
                                 {
                                     "id": "invitation",
                                     "key": "invitation",
-                                    "value": "sint",
+                                    "value": "id",
                                     "description": "The invitation."
                                 }
                             ]
@@ -330,7 +330,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\n  \"data\": [\n    {\n      \"id\": 1,\n      \"type\": \"App\\\\Notifications\\\\TicketAssigned\",\n      \"data\": {\n        \"ticket_id\": 1,\n        \"message\": \"Se te ha asignado un nuevo ticket.\"\n      },\n      \"read_at\": null,\n      \"created_at\": \"2023-03-27T23:22:12.000000Z\"\n    }\n  ]\n}",
+                            "body": "{}",
                             "name": ""
                         }
                     ]
@@ -347,7 +347,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "consectetur",
+                                    "value": "sed",
                                     "description": "The ID of the notification."
                                 },
                                 {
@@ -376,7 +376,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\n  \"message\": \"Notificaci\u00f3n marcada como le\u00edda.\"\n}",
+                            "body": "{}",
                             "name": ""
                         }
                     ]
@@ -393,7 +393,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quasi",
+                                    "value": "commodi",
                                     "description": "The ID of the notification."
                                 },
                                 {
@@ -516,7 +516,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\n  \"data\": [\n    {\n      \"id\": 1,\n      \"name\": \"Urgente\",\n      \"color\": \"#FF0000\",\n      \"created_at\": \"2023-03-27T23:22:12.000000Z\",\n      \"updated_at\": \"2023-03-27T23:22:12.000000Z\"\n    }\n  ]\n}",
+                            "body": "{}",
                             "name": ""
                         }
                     ]
@@ -559,7 +559,7 @@
                         {
                             "header": [],
                             "code": 201,
-                            "body": "{\n  \"id\": 1,\n  \"name\": \"Urgente\",\n  \"color\": \"#FF0000\",\n  \"created_at\": \"2023-03-27T23:22:12.000000Z\",\n  \"updated_at\": \"2023-03-27T23:22:12.000000Z\"\n}",
+                            "body": "{}",
                             "name": ""
                         }
                     ]
@@ -608,7 +608,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\n  \"id\": 1,\n  \"name\": \"Muy Urgente\",\n  \"color\": \"#FF0000\",\n  \"created_at\": \"2023-03-27T23:22:12.000000Z\",\n  \"updated_at\": \"2023-03-27T23:22:12.000000Z\"\n}",
+                            "body": "{}",
                             "name": ""
                         }
                     ]
@@ -677,7 +677,7 @@
                                 {
                                     "id": "ticket",
                                     "key": "ticket",
-                                    "value": "similique",
+                                    "value": "asperiores",
                                     "description": "The ticket."
                                 },
                                 {
@@ -726,13 +726,13 @@
                                 {
                                     "id": "ticket",
                                     "key": "ticket",
-                                    "value": "iste",
+                                    "value": "nulla",
                                     "description": "The ticket."
                                 },
                                 {
                                     "id": "tag",
                                     "key": "tag",
-                                    "value": "1",
+                                    "value": "8",
                                     "description": "The tag."
                                 },
                                 {
@@ -803,7 +803,7 @@
                                 {
                                     "id": "workspace",
                                     "key": "workspace",
-                                    "value": "doloremque",
+                                    "value": "odit",
                                     "description": "The workspace."
                                 }
                             ]
@@ -843,7 +843,7 @@
                                 {
                                     "id": "workspace",
                                     "key": "workspace",
-                                    "value": "quasi",
+                                    "value": "dolore",
                                     "description": "The workspace."
                                 }
                             ]
@@ -861,7 +861,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"\\\"Problema con el servidor\\\"\",\"description\":\"\\\"El servidor no responde\\\"\",\"priority\":\"low\",\"category\":\"bug\",\"assignee_id\":\"blanditiis\"}"
+                            "raw": "{\"title\":\"\\\"Problema con el servidor\\\"\",\"description\":\"\\\"El servidor no responde\\\"\",\"priority\":\"high\",\"category\":\"bug\",\"assignee_id\":\"iure\"}"
                         },
                         "description": ""
                     },
@@ -886,13 +886,13 @@
                                 {
                                     "id": "workspace",
                                     "key": "workspace",
-                                    "value": "quas",
+                                    "value": "sed",
                                     "description": "The workspace."
                                 },
                                 {
                                     "id": "ticket",
                                     "key": "ticket",
-                                    "value": "corrupti",
+                                    "value": "ea",
                                     "description": "The ticket."
                                 },
                                 {
@@ -938,13 +938,13 @@
                                 {
                                     "id": "workspace",
                                     "key": "workspace",
-                                    "value": "sed",
+                                    "value": "illo",
                                     "description": "The workspace."
                                 },
                                 {
                                     "id": "ticket",
                                     "key": "ticket",
-                                    "value": "sint",
+                                    "value": "totam",
                                     "description": "The ticket."
                                 },
                                 {
@@ -968,7 +968,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"\\\"Problema con el servidor actualizado\\\"\",\"description\":\"Sapiente voluptas rerum aliquid ut asperiores rerum sequi.\",\"priority\":\"high\",\"status\":\"\\\"cerrado\\\"\"}"
+                            "raw": "{\"title\":\"\\\"Problema con el servidor actualizado\\\"\",\"description\":\"Quibusdam aspernatur non ut recusandae aut ut et.\",\"priority\":\"low\",\"status\":\"\\\"cerrado\\\"\"}"
                         },
                         "description": ""
                     },
@@ -993,13 +993,13 @@
                                 {
                                     "id": "workspace",
                                     "key": "workspace",
-                                    "value": "ea",
+                                    "value": "saepe",
                                     "description": "The workspace."
                                 },
                                 {
                                     "id": "ticket",
                                     "key": "ticket",
-                                    "value": "illo",
+                                    "value": "adipisci",
                                     "description": "The ticket."
                                 },
                                 {
@@ -1045,13 +1045,13 @@
                                 {
                                     "id": "workspace",
                                     "key": "workspace",
-                                    "value": "sit",
+                                    "value": "nesciunt",
                                     "description": "The workspace."
                                 },
                                 {
                                     "id": "ticket",
                                     "key": "ticket",
-                                    "value": "dolores",
+                                    "value": "fugiat",
                                     "description": "The ticket."
                                 }
                             ]
@@ -1087,13 +1087,13 @@
                                 {
                                     "id": "workspace",
                                     "key": "workspace",
-                                    "value": "iusto",
+                                    "value": "iure",
                                     "description": "The workspace."
                                 },
                                 {
                                     "id": "ticket",
                                     "key": "ticket",
-                                    "value": "veritatis",
+                                    "value": "aspernatur",
                                     "description": "The ticket."
                                 }
                             ]
@@ -1228,7 +1228,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"nycgqycgkfjfzibbnhmmoypt\",\"last_name\":\"vugdufjrsqf\",\"email\":\"runolfsdottir.dan@example.net\",\"password\":\"}5-bTu\",\"phone\":\"exnlyryirysakht\",\"address\":\"ztjtlv\",\"avatar_url\":\"eout.jpg\"}"
+                            "raw": "{\"first_name\":\"ztrfdsticbytnx\",\"last_name\":\"fkdh\",\"email\":\"doyle.howell@example.org\",\"password\":\"GG`UAq%WZRkasJ\",\"phone\":\"vsqfqibfwqydet\",\"address\":\"eatbpqmcmxggfloj\",\"avatar_url\":\"iits.jpg\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1249,7 +1249,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "ipsum",
+                                    "value": "harum",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -1285,7 +1285,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "59"
+                                    "value": "58"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -1293,7 +1293,7 @@
                                 }
                             ],
                             "code": 404,
-                            "body": "{\n    \"message\": \"No query results for model [App\\\\Models\\\\User] ipsum\"\n}",
+                            "body": "{\n    \"message\": \"No query results for model [App\\\\Models\\\\User] harum\"\n}",
                             "name": ""
                         }
                     ]
@@ -1310,7 +1310,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "1",
+                                    "value": "11",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -1328,7 +1328,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"first_name\":\"uxmoetgmdr\",\"last_name\":\"ohefzwnzukszekskij\",\"email\":\"daron89@example.net\",\"password\":\"muW'#L\\\"hXag>3NdLp\",\"phone\":\"mjihhvpdxdnxwwg\",\"address\":\"gvq\",\"avatar_url\":\"http:\\\/\\\/dibbert.com\\\/eveniet-earum-corporis-tempora-cumque-et-libero-reiciendis\"}"
+                            "raw": "{\"first_name\":\"rljdsozmusz\",\"last_name\":\"ynnzjhlbqaiwddgxoe\",\"email\":\"maximus.bogisich@example.com\",\"password\":\"W'M`P'$ow3T@;%\",\"phone\":\"gs\",\"address\":\"izapnmfkrysoulsiei\",\"avatar_url\":\"http:\\\/\\\/runolfsson.org\\\/nemo-quas-cupiditate-quia-aperiam-deleniti-itaque\"}"
                         },
                         "description": ""
                     },
@@ -1346,7 +1346,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "1",
+                                    "value": "11",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -1420,7 +1420,7 @@
                                 {
                                     "id": "workspace",
                                     "key": "workspace",
-                                    "value": "recusandae",
+                                    "value": "non",
                                     "description": "The workspace."
                                 },
                                 {
@@ -1466,7 +1466,7 @@
                                 {
                                     "id": "workspace",
                                     "key": "workspace",
-                                    "value": "dolorum",
+                                    "value": "delectus",
                                     "description": "The workspace."
                                 },
                                 {
@@ -1515,13 +1515,13 @@
                                 {
                                     "id": "workspace",
                                     "key": "workspace",
-                                    "value": "ipsum",
+                                    "value": "quisquam",
                                     "description": "The workspace."
                                 },
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "1",
+                                    "value": "11",
                                     "description": "The user."
                                 }
                             ]
@@ -1560,13 +1560,13 @@
                                 {
                                     "id": "workspace",
                                     "key": "workspace",
-                                    "value": "sunt",
+                                    "value": "esse",
                                     "description": "The workspace."
                                 },
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "1",
+                                    "value": "11",
                                     "description": "The user."
                                 },
                                 {
@@ -1679,7 +1679,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"\\\"Nuevo Workspace\\\"\",\"description\":\"Vitae explicabo quisquam aut odio doloremque in necessitatibus.\",\"logo_url\":\"http:\\\/\\\/www.sipes.com\\\/laborum-qui-non-est-dicta-voluptatem\"}"
+                            "raw": "{\"name\":\"\\\"Nuevo Workspace\\\"\",\"description\":\"Hic et fugit consequuntur.\",\"logo_url\":\"http:\\\/\\\/berge.biz\\\/aut-voluptatum-ad-ipsam-maxime-iure-temporibus\"}"
                         },
                         "description": ""
                     },
@@ -1762,7 +1762,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"\\\"Workspace Actualizado\\\"\",\"description\":\"Iusto animi ab expedita.\",\"logo_url\":\"https:\\\/\\\/www.wiegand.com\\\/temporibus-dolor-earum-at-magni\"}"
+                            "raw": "{\"name\":\"\\\"Workspace Actualizado\\\"\",\"description\":\"Omnis eaque eum et aut libero molestiae.\",\"logo_url\":\"http:\\\/\\\/quitzon.com\\\/omnis-in-et-nisi-et-vero-repellendus\"}"
                         },
                         "description": ""
                     },

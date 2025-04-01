@@ -262,7 +262,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: March 28, 2025</li>
+        <li>Last updated: April 1, 2025</li>
     </ul>
 </div>
 
@@ -300,7 +300,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/workspaces/qui/tickets/nobis/comments" \
+    --get "http://localhost/api/workspaces/unde/tickets/autem/comments" \
     --header "Authorization: Bearer {YOUR_AUTH_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -308,7 +308,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/workspaces/qui/tickets/nobis/comments"
+    "http://localhost/api/workspaces/unde/tickets/autem/comments"
 );
 
 const headers = {
@@ -330,16 +330,7 @@ fetch(url, {
         </blockquote>
                 <pre>
 
-<code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: [
-        {
-            &quot;id&quot;: 1,
-            &quot;content&quot;: &quot;Este es un comentario.&quot;,
-            &quot;user_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2023-03-27T23:22:12.000000Z&quot;
-        }
-    ]
-}</code>
+<code class="language-json" style="max-height: 300px;">{}</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-workspaces--workspace--tickets--ticket--comments" hidden>
@@ -429,10 +420,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="workspace"                data-endpoint="GETapi-workspaces--workspace--tickets--ticket--comments"
-               value="qui"
+               value="unde"
                data-component="url">
     <br>
-<p>The workspace. Example: <code>qui</code></p>
+<p>The workspace. Example: <code>unde</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>ticket</code></b>&nbsp;&nbsp;
@@ -440,10 +431,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="ticket"                data-endpoint="GETapi-workspaces--workspace--tickets--ticket--comments"
-               value="nobis"
+               value="autem"
                data-component="url">
     <br>
-<p>The ticket. Example: <code>nobis</code></p>
+<p>The ticket. Example: <code>autem</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>ticket_id</code></b>&nbsp;&nbsp;
@@ -472,20 +463,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/workspaces/omnis/tickets/rerum/comments" \
+    "http://localhost/api/workspaces/dolores/tickets/commodi/comments" \
     --header "Authorization: Bearer {YOUR_AUTH_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"content\": \"\\\"Este es un comentario.\\\"\",
-    \"visibility\": \"private\"
+    \"visibility\": \"public\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/workspaces/omnis/tickets/rerum/comments"
+    "http://localhost/api/workspaces/dolores/tickets/commodi/comments"
 );
 
 const headers = {
@@ -496,7 +487,7 @@ const headers = {
 
 let body = {
     "content": "\"Este es un comentario.\"",
-    "visibility": "private"
+    "visibility": "public"
 };
 
 fetch(url, {
@@ -513,12 +504,7 @@ fetch(url, {
         </blockquote>
                 <pre>
 
-<code class="language-json" style="max-height: 300px;">{
-    &quot;id&quot;: 1,
-    &quot;content&quot;: &quot;Este es un comentario.&quot;,
-    &quot;user_id&quot;: 1,
-    &quot;created_at&quot;: &quot;2023-03-27T23:22:12.000000Z&quot;
-}</code>
+<code class="language-json" style="max-height: 300px;">{}</code>
  </pre>
     </span>
 <span id="execution-results-POSTapi-workspaces--workspace--tickets--ticket--comments" hidden>
@@ -608,10 +594,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="workspace"                data-endpoint="POSTapi-workspaces--workspace--tickets--ticket--comments"
-               value="omnis"
+               value="dolores"
                data-component="url">
     <br>
-<p>The workspace. Example: <code>omnis</code></p>
+<p>The workspace. Example: <code>dolores</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>ticket</code></b>&nbsp;&nbsp;
@@ -619,10 +605,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="ticket"                data-endpoint="POSTapi-workspaces--workspace--tickets--ticket--comments"
-               value="rerum"
+               value="commodi"
                data-component="url">
     <br>
-<p>The ticket. Example: <code>rerum</code></p>
+<p>The ticket. Example: <code>commodi</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>ticket_id</code></b>&nbsp;&nbsp;
@@ -653,10 +639,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="visibility"                data-endpoint="POSTapi-workspaces--workspace--tickets--ticket--comments"
-               value="private"
+               value="public"
                data-component="body">
     <br>
-<p>Example: <code>private</code></p>
+<p>Example: <code>public</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>public</code></li> <li><code>private</code></li></ul>
         </div>
@@ -807,11 +793,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/workspaces/in/invite" \
+    "http://localhost/api/workspaces/porro/invite" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"hkuphal@example.org\",
+    \"email\": \"rschulist@example.org\",
     \"role\": \"manager\"
 }"
 </code></pre></div>
@@ -819,7 +805,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/workspaces/in/invite"
+    "http://localhost/api/workspaces/porro/invite"
 );
 
 const headers = {
@@ -828,7 +814,7 @@ const headers = {
 };
 
 let body = {
-    "email": "hkuphal@example.org",
+    "email": "rschulist@example.org",
     "role": "manager"
 };
 
@@ -918,10 +904,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="workspace"                data-endpoint="POSTapi-workspaces--workspace--invite"
-               value="in"
+               value="porro"
                data-component="url">
     <br>
-<p>The workspace. Example: <code>in</code></p>
+<p>The workspace. Example: <code>porro</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -930,10 +916,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-workspaces--workspace--invite"
-               value="hkuphal@example.org"
+               value="rschulist@example.org"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>hkuphal@example.org</code></p>
+<p>Must be a valid email address. Example: <code>rschulist@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>role</code></b>&nbsp;&nbsp;
@@ -963,14 +949,14 @@ Must be one of:
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/workspaces/invitations/architecto/accept" \
+    "http://localhost/api/workspaces/invitations/iste/accept" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/workspaces/invitations/architecto/accept"
+    "http://localhost/api/workspaces/invitations/iste/accept"
 );
 
 const headers = {
@@ -1063,10 +1049,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="invitation"                data-endpoint="POSTapi-workspaces-invitations--invitation--accept"
-               value="architecto"
+               value="iste"
                data-component="url">
     <br>
-<p>The invitation. Example: <code>architecto</code></p>
+<p>The invitation. Example: <code>iste</code></p>
             </div>
                     </form>
 
@@ -1083,14 +1069,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/workspaces/invitations/sint/decline" \
+    "http://localhost/api/workspaces/invitations/id/decline" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/workspaces/invitations/sint/decline"
+    "http://localhost/api/workspaces/invitations/id/decline"
 );
 
 const headers = {
@@ -1183,10 +1169,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="invitation"                data-endpoint="POSTapi-workspaces-invitations--invitation--decline"
-               value="sint"
+               value="id"
                data-component="url">
     <br>
-<p>The invitation. Example: <code>sint</code></p>
+<p>The invitation. Example: <code>id</code></p>
             </div>
                     </form>
 
@@ -1238,20 +1224,7 @@ fetch(url, {
         </blockquote>
                 <pre>
 
-<code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: [
-        {
-            &quot;id&quot;: 1,
-            &quot;type&quot;: &quot;App\\Notifications\\TicketAssigned&quot;,
-            &quot;data&quot;: {
-                &quot;ticket_id&quot;: 1,
-                &quot;message&quot;: &quot;Se te ha asignado un nuevo ticket.&quot;
-            },
-            &quot;read_at&quot;: null,
-            &quot;created_at&quot;: &quot;2023-03-27T23:22:12.000000Z&quot;
-        }
-    ]
-}</code>
+<code class="language-json" style="max-height: 300px;">{}</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-notifications" hidden>
@@ -1350,7 +1323,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/notifications/consectetur/read" \
+    "http://localhost/api/notifications/sed/read" \
     --header "Authorization: Bearer {YOUR_AUTH_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1358,7 +1331,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/notifications/consectetur/read"
+    "http://localhost/api/notifications/sed/read"
 );
 
 const headers = {
@@ -1380,9 +1353,7 @@ fetch(url, {
         </blockquote>
                 <pre>
 
-<code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Notificaci&oacute;n marcada como le&iacute;da.&quot;
-}</code>
+<code class="language-json" style="max-height: 300px;">{}</code>
  </pre>
     </span>
 <span id="execution-results-POSTapi-notifications--id--read" hidden>
@@ -1472,10 +1443,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="POSTapi-notifications--id--read"
-               value="consectetur"
+               value="sed"
                data-component="url">
     <br>
-<p>The ID of the notification. Example: <code>consectetur</code></p>
+<p>The ID of the notification. Example: <code>sed</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>notification_id</code></b>&nbsp;&nbsp;
@@ -1504,7 +1475,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/notifications/quasi" \
+    "http://localhost/api/notifications/commodi" \
     --header "Authorization: Bearer {YOUR_AUTH_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1512,7 +1483,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/notifications/quasi"
+    "http://localhost/api/notifications/commodi"
 );
 
 const headers = {
@@ -1623,10 +1594,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="DELETEapi-notifications--id-"
-               value="quasi"
+               value="commodi"
                data-component="url">
     <br>
-<p>The ID of the notification. Example: <code>quasi</code></p>
+<p>The ID of the notification. Example: <code>commodi</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>notification_id</code></b>&nbsp;&nbsp;
@@ -1813,17 +1784,7 @@ fetch(url, {
         </blockquote>
                 <pre>
 
-<code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: [
-        {
-            &quot;id&quot;: 1,
-            &quot;name&quot;: &quot;Urgente&quot;,
-            &quot;color&quot;: &quot;#FF0000&quot;,
-            &quot;created_at&quot;: &quot;2023-03-27T23:22:12.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2023-03-27T23:22:12.000000Z&quot;
-        }
-    ]
-}</code>
+<code class="language-json" style="max-height: 300px;">{}</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-workspaces--workspace_id--tags" hidden>
@@ -1975,13 +1936,7 @@ fetch(url, {
         </blockquote>
                 <pre>
 
-<code class="language-json" style="max-height: 300px;">{
-    &quot;id&quot;: 1,
-    &quot;name&quot;: &quot;Urgente&quot;,
-    &quot;color&quot;: &quot;#FF0000&quot;,
-    &quot;created_at&quot;: &quot;2023-03-27T23:22:12.000000Z&quot;,
-    &quot;updated_at&quot;: &quot;2023-03-27T23:22:12.000000Z&quot;
-}</code>
+<code class="language-json" style="max-height: 300px;">{}</code>
  </pre>
     </span>
 <span id="execution-results-POSTapi-workspaces--workspace_id--tags" hidden>
@@ -2156,13 +2111,7 @@ fetch(url, {
         </blockquote>
                 <pre>
 
-<code class="language-json" style="max-height: 300px;">{
-    &quot;id&quot;: 1,
-    &quot;name&quot;: &quot;Muy Urgente&quot;,
-    &quot;color&quot;: &quot;#FF0000&quot;,
-    &quot;created_at&quot;: &quot;2023-03-27T23:22:12.000000Z&quot;,
-    &quot;updated_at&quot;: &quot;2023-03-27T23:22:12.000000Z&quot;
-}</code>
+<code class="language-json" style="max-height: 300px;">{}</code>
  </pre>
     </span>
 <span id="execution-results-PUTapi-workspaces--workspace_id--tags--tag_id-" hidden>
@@ -2462,7 +2411,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/tickets/similique/tags" \
+    "http://localhost/api/tickets/asperiores/tags" \
     --header "Authorization: Bearer {YOUR_AUTH_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -2478,7 +2427,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/tickets/similique/tags"
+    "http://localhost/api/tickets/asperiores/tags"
 );
 
 const headers = {
@@ -2599,10 +2548,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="ticket"                data-endpoint="POSTapi-tickets--ticket--tags"
-               value="similique"
+               value="asperiores"
                data-component="url">
     <br>
-<p>The ticket. Example: <code>similique</code></p>
+<p>The ticket. Example: <code>asperiores</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>ticket_id</code></b>&nbsp;&nbsp;
@@ -2645,7 +2594,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/tickets/iste/tags/1" \
+    "http://localhost/api/tickets/nulla/tags/8" \
     --header "Authorization: Bearer {YOUR_AUTH_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2653,7 +2602,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/tickets/iste/tags/1"
+    "http://localhost/api/tickets/nulla/tags/8"
 );
 
 const headers = {
@@ -2764,10 +2713,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="ticket"                data-endpoint="DELETEapi-tickets--ticket--tags--tag-"
-               value="iste"
+               value="nulla"
                data-component="url">
     <br>
-<p>The ticket. Example: <code>iste</code></p>
+<p>The ticket. Example: <code>nulla</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>tag</code></b>&nbsp;&nbsp;
@@ -2775,10 +2724,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="tag"                data-endpoint="DELETEapi-tickets--ticket--tags--tag-"
-               value="1"
+               value="8"
                data-component="url">
     <br>
-<p>The tag. Example: <code>1</code></p>
+<p>The tag. Example: <code>8</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>ticket_id</code></b>&nbsp;&nbsp;
@@ -2822,7 +2771,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/workspaces/doloremque/tickets?page=1&amp;per_page=10" \
+    --get "http://localhost/api/workspaces/odit/tickets?page=1&amp;per_page=10" \
     --header "Authorization: Bearer {YOUR_AUTH_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2830,7 +2779,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/workspaces/doloremque/tickets"
+    "http://localhost/api/workspaces/odit/tickets"
 );
 
 const params = {
@@ -2949,10 +2898,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="workspace"                data-endpoint="GETapi-workspaces--workspace--tickets"
-               value="doloremque"
+               value="odit"
                data-component="url">
     <br>
-<p>The workspace. Example: <code>doloremque</code></p>
+<p>The workspace. Example: <code>odit</code></p>
             </div>
                         <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
                                     <div style="padding-left: 28px; clear: unset;">
@@ -2993,23 +2942,23 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/workspaces/quasi/tickets" \
+    "http://localhost/api/workspaces/dolore/tickets" \
     --header "Authorization: Bearer {YOUR_AUTH_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"title\": \"\\\"Problema con el servidor\\\"\",
     \"description\": \"\\\"El servidor no responde\\\"\",
-    \"priority\": \"low\",
+    \"priority\": \"high\",
     \"category\": \"bug\",
-    \"assignee_id\": \"blanditiis\"
+    \"assignee_id\": \"iure\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/workspaces/quasi/tickets"
+    "http://localhost/api/workspaces/dolore/tickets"
 );
 
 const headers = {
@@ -3021,9 +2970,9 @@ const headers = {
 let body = {
     "title": "\"Problema con el servidor\"",
     "description": "\"El servidor no responde\"",
-    "priority": "low",
+    "priority": "high",
     "category": "bug",
-    "assignee_id": "blanditiis"
+    "assignee_id": "iure"
 };
 
 fetch(url, {
@@ -3130,10 +3079,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="workspace"                data-endpoint="POSTapi-workspaces--workspace--tickets"
-               value="quasi"
+               value="dolore"
                data-component="url">
     <br>
-<p>The workspace. Example: <code>quasi</code></p>
+<p>The workspace. Example: <code>dolore</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -3164,10 +3113,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="priority"                data-endpoint="POSTapi-workspaces--workspace--tickets"
-               value="low"
+               value="high"
                data-component="body">
     <br>
-<p>Example: <code>low</code></p>
+<p>Example: <code>high</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>low</code></li> <li><code>medium</code></li> <li><code>high</code></li> <li><code>critical</code></li></ul>
         </div>
@@ -3190,10 +3139,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="assignee_id"                data-endpoint="POSTapi-workspaces--workspace--tickets"
-               value="blanditiis"
+               value="iure"
                data-component="body">
     <br>
-<p>The <code>id</code> of an existing record in the users table. Example: <code>blanditiis</code></p>
+<p>The <code>id</code> of an existing record in the users table. Example: <code>iure</code></p>
         </div>
         </form>
 
@@ -3211,7 +3160,7 @@ Must be one of:
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/workspaces/quas/tickets/corrupti" \
+    --get "http://localhost/api/workspaces/sed/tickets/ea" \
     --header "Authorization: Bearer {YOUR_AUTH_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -3219,7 +3168,7 @@ Must be one of:
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/workspaces/quas/tickets/corrupti"
+    "http://localhost/api/workspaces/sed/tickets/ea"
 );
 
 const headers = {
@@ -3331,10 +3280,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="workspace"                data-endpoint="GETapi-workspaces--workspace--tickets--ticket-"
-               value="quas"
+               value="sed"
                data-component="url">
     <br>
-<p>The workspace. Example: <code>quas</code></p>
+<p>The workspace. Example: <code>sed</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>ticket</code></b>&nbsp;&nbsp;
@@ -3342,10 +3291,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="ticket"                data-endpoint="GETapi-workspaces--workspace--tickets--ticket-"
-               value="corrupti"
+               value="ea"
                data-component="url">
     <br>
-<p>The ticket. Example: <code>corrupti</code></p>
+<p>The ticket. Example: <code>ea</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
@@ -3374,14 +3323,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PATCH \
-    "http://localhost/api/workspaces/sed/tickets/sint" \
+    "http://localhost/api/workspaces/illo/tickets/totam" \
     --header "Authorization: Bearer {YOUR_AUTH_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"title\": \"\\\"Problema con el servidor actualizado\\\"\",
-    \"description\": \"Sapiente voluptas rerum aliquid ut asperiores rerum sequi.\",
-    \"priority\": \"high\",
+    \"description\": \"Quibusdam aspernatur non ut recusandae aut ut et.\",
+    \"priority\": \"low\",
     \"status\": \"\\\"cerrado\\\"\"
 }"
 </code></pre></div>
@@ -3389,7 +3338,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/workspaces/sed/tickets/sint"
+    "http://localhost/api/workspaces/illo/tickets/totam"
 );
 
 const headers = {
@@ -3400,8 +3349,8 @@ const headers = {
 
 let body = {
     "title": "\"Problema con el servidor actualizado\"",
-    "description": "Sapiente voluptas rerum aliquid ut asperiores rerum sequi.",
-    "priority": "high",
+    "description": "Quibusdam aspernatur non ut recusandae aut ut et.",
+    "priority": "low",
     "status": "\"cerrado\""
 };
 
@@ -3509,10 +3458,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="workspace"                data-endpoint="PATCHapi-workspaces--workspace--tickets--ticket-"
-               value="sed"
+               value="illo"
                data-component="url">
     <br>
-<p>The workspace. Example: <code>sed</code></p>
+<p>The workspace. Example: <code>illo</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>ticket</code></b>&nbsp;&nbsp;
@@ -3520,10 +3469,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="ticket"                data-endpoint="PATCHapi-workspaces--workspace--tickets--ticket-"
-               value="sint"
+               value="totam"
                data-component="url">
     <br>
-<p>The ticket. Example: <code>sint</code></p>
+<p>The ticket. Example: <code>totam</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
@@ -3554,10 +3503,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="PATCHapi-workspaces--workspace--tickets--ticket-"
-               value="Sapiente voluptas rerum aliquid ut asperiores rerum sequi."
+               value="Quibusdam aspernatur non ut recusandae aut ut et."
                data-component="body">
     <br>
-<p>Example: <code>Sapiente voluptas rerum aliquid ut asperiores rerum sequi.</code></p>
+<p>Example: <code>Quibusdam aspernatur non ut recusandae aut ut et.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>priority</code></b>&nbsp;&nbsp;
@@ -3565,10 +3514,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="priority"                data-endpoint="PATCHapi-workspaces--workspace--tickets--ticket-"
-               value="high"
+               value="low"
                data-component="body">
     <br>
-<p>Example: <code>high</code></p>
+<p>Example: <code>low</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>low</code></li> <li><code>medium</code></li> <li><code>high</code></li> <li><code>critical</code></li></ul>
         </div>
@@ -3610,7 +3559,7 @@ Must be one of:
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/workspaces/ea/tickets/illo" \
+    "http://localhost/api/workspaces/saepe/tickets/adipisci" \
     --header "Authorization: Bearer {YOUR_AUTH_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -3618,7 +3567,7 @@ Must be one of:
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/workspaces/ea/tickets/illo"
+    "http://localhost/api/workspaces/saepe/tickets/adipisci"
 );
 
 const headers = {
@@ -3729,10 +3678,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="workspace"                data-endpoint="DELETEapi-workspaces--workspace--tickets--ticket-"
-               value="ea"
+               value="saepe"
                data-component="url">
     <br>
-<p>The workspace. Example: <code>ea</code></p>
+<p>The workspace. Example: <code>saepe</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>ticket</code></b>&nbsp;&nbsp;
@@ -3740,10 +3689,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="ticket"                data-endpoint="DELETEapi-workspaces--workspace--tickets--ticket-"
-               value="illo"
+               value="adipisci"
                data-component="url">
     <br>
-<p>The ticket. Example: <code>illo</code></p>
+<p>The ticket. Example: <code>adipisci</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
@@ -3771,14 +3720,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/workspaces/sit/tickets/dolores/assign" \
+    "http://localhost/api/workspaces/nesciunt/tickets/fugiat/assign" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/workspaces/sit/tickets/dolores/assign"
+    "http://localhost/api/workspaces/nesciunt/tickets/fugiat/assign"
 );
 
 const headers = {
@@ -3871,10 +3820,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="workspace"                data-endpoint="POSTapi-workspaces--workspace--tickets--ticket--assign"
-               value="sit"
+               value="nesciunt"
                data-component="url">
     <br>
-<p>The workspace. Example: <code>sit</code></p>
+<p>The workspace. Example: <code>nesciunt</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>ticket</code></b>&nbsp;&nbsp;
@@ -3882,10 +3831,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="ticket"                data-endpoint="POSTapi-workspaces--workspace--tickets--ticket--assign"
-               value="dolores"
+               value="fugiat"
                data-component="url">
     <br>
-<p>The ticket. Example: <code>dolores</code></p>
+<p>The ticket. Example: <code>fugiat</code></p>
             </div>
                     </form>
 
@@ -3902,14 +3851,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/workspaces/iusto/tickets/veritatis/status" \
+    "http://localhost/api/workspaces/iure/tickets/aspernatur/status" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/workspaces/iusto/tickets/veritatis/status"
+    "http://localhost/api/workspaces/iure/tickets/aspernatur/status"
 );
 
 const headers = {
@@ -4002,10 +3951,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="workspace"                data-endpoint="POSTapi-workspaces--workspace--tickets--ticket--status"
-               value="iusto"
+               value="iure"
                data-component="url">
     <br>
-<p>The workspace. Example: <code>iusto</code></p>
+<p>The workspace. Example: <code>iure</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>ticket</code></b>&nbsp;&nbsp;
@@ -4013,10 +3962,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="ticket"                data-endpoint="POSTapi-workspaces--workspace--tickets--ticket--status"
-               value="veritatis"
+               value="aspernatur"
                data-component="url">
     <br>
-<p>The ticket. Example: <code>veritatis</code></p>
+<p>The ticket. Example: <code>aspernatur</code></p>
             </div>
                     </form>
 
@@ -4349,13 +4298,13 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"first_name\": \"nycgqycgkfjfzibbnhmmoypt\",
-    \"last_name\": \"vugdufjrsqf\",
-    \"email\": \"runolfsdottir.dan@example.net\",
-    \"password\": \"}5-bTu\",
-    \"phone\": \"exnlyryirysakht\",
-    \"address\": \"ztjtlv\",
-    \"avatar_url\": \"eout.jpg\"
+    \"first_name\": \"ztrfdsticbytnx\",
+    \"last_name\": \"fkdh\",
+    \"email\": \"doyle.howell@example.org\",
+    \"password\": \"GG`UAq%WZRkasJ\",
+    \"phone\": \"vsqfqibfwqydet\",
+    \"address\": \"eatbpqmcmxggfloj\",
+    \"avatar_url\": \"iits.jpg\"
 }"
 </code></pre></div>
 
@@ -4371,13 +4320,13 @@ const headers = {
 };
 
 let body = {
-    "first_name": "nycgqycgkfjfzibbnhmmoypt",
-    "last_name": "vugdufjrsqf",
-    "email": "runolfsdottir.dan@example.net",
-    "password": "}5-bTu",
-    "phone": "exnlyryirysakht",
-    "address": "ztjtlv",
-    "avatar_url": "eout.jpg"
+    "first_name": "ztrfdsticbytnx",
+    "last_name": "fkdh",
+    "email": "doyle.howell@example.org",
+    "password": "GG`UAq%WZRkasJ",
+    "phone": "vsqfqibfwqydet",
+    "address": "eatbpqmcmxggfloj",
+    "avatar_url": "iits.jpg"
 };
 
 fetch(url, {
@@ -4466,10 +4415,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="first_name"                data-endpoint="POSTapi-users"
-               value="nycgqycgkfjfzibbnhmmoypt"
+               value="ztrfdsticbytnx"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>nycgqycgkfjfzibbnhmmoypt</code></p>
+<p>Must not be greater than 255 characters. Example: <code>ztrfdsticbytnx</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -4477,10 +4426,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="last_name"                data-endpoint="POSTapi-users"
-               value="vugdufjrsqf"
+               value="fkdh"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>vugdufjrsqf</code></p>
+<p>Must not be greater than 255 characters. Example: <code>fkdh</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -4488,10 +4437,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-users"
-               value="runolfsdottir.dan@example.net"
+               value="doyle.howell@example.org"
                data-component="body">
     <br>
-<p>Must be a valid email address. Must not be greater than 255 characters. Example: <code>runolfsdottir.dan@example.net</code></p>
+<p>Must be a valid email address. Must not be greater than 255 characters. Example: <code>doyle.howell@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -4499,10 +4448,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-users"
-               value="}5-bTu"
+               value="GG`UAq%WZRkasJ"
                data-component="body">
     <br>
-<p>Must be at least 8 characters. Example: <code>}5-bTu</code></p>
+<p>Must be at least 8 characters. Example: <code>GG</code>UAq%WZRkasJ`</p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
@@ -4510,10 +4459,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="phone"                data-endpoint="POSTapi-users"
-               value="exnlyryirysakht"
+               value="vsqfqibfwqydet"
                data-component="body">
     <br>
-<p>Must not be greater than 20 characters. Example: <code>exnlyryirysakht</code></p>
+<p>Must not be greater than 20 characters. Example: <code>vsqfqibfwqydet</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>address</code></b>&nbsp;&nbsp;
@@ -4521,10 +4470,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="address"                data-endpoint="POSTapi-users"
-               value="ztjtlv"
+               value="eatbpqmcmxggfloj"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>ztjtlv</code></p>
+<p>Must not be greater than 255 characters. Example: <code>eatbpqmcmxggfloj</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>avatar_url</code></b>&nbsp;&nbsp;
@@ -4532,10 +4481,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="avatar_url"                data-endpoint="POSTapi-users"
-               value="eout.jpg"
+               value="iits.jpg"
                data-component="body">
     <br>
-<p>Must be a valid URL. Must end with one of <code>.jpg</code>, <code>.jpeg</code>, or <code>.png</code>. Example: <code>eout.jpg</code></p>
+<p>Must be a valid URL. Must end with one of <code>.jpg</code>, <code>.jpeg</code>, or <code>.png</code>. Example: <code>iits.jpg</code></p>
         </div>
         </form>
 
@@ -4553,7 +4502,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/users/ipsum" \
+    --get "http://localhost/api/users/harum" \
     --header "Authorization: Bearer {YOUR_AUTH_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -4561,7 +4510,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/users/ipsum"
+    "http://localhost/api/users/harum"
 );
 
 const headers = {
@@ -4588,12 +4537,12 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 59
+x-ratelimit-remaining: 58
 access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;No query results for model [App\\Models\\User] ipsum&quot;
+    &quot;message&quot;: &quot;No query results for model [App\\Models\\User] harum&quot;
 }</code>
  </pre>
     </span>
@@ -4684,10 +4633,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="GETapi-users--id-"
-               value="ipsum"
+               value="harum"
                data-component="url">
     <br>
-<p>The ID of the user. Example: <code>ipsum</code></p>
+<p>The ID of the user. Example: <code>harum</code></p>
             </div>
                     </form>
 
@@ -4705,25 +4654,25 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/users/1" \
+    "http://localhost/api/users/11" \
     --header "Authorization: Bearer {YOUR_AUTH_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"first_name\": \"uxmoetgmdr\",
-    \"last_name\": \"ohefzwnzukszekskij\",
-    \"email\": \"daron89@example.net\",
-    \"password\": \"muW\'#L\\\"hXag&gt;3NdLp\",
-    \"phone\": \"mjihhvpdxdnxwwg\",
-    \"address\": \"gvq\",
-    \"avatar_url\": \"http:\\/\\/dibbert.com\\/eveniet-earum-corporis-tempora-cumque-et-libero-reiciendis\"
+    \"first_name\": \"rljdsozmusz\",
+    \"last_name\": \"ynnzjhlbqaiwddgxoe\",
+    \"email\": \"maximus.bogisich@example.com\",
+    \"password\": \"W\'M`P\'$ow3T@;%\",
+    \"phone\": \"gs\",
+    \"address\": \"izapnmfkrysoulsiei\",
+    \"avatar_url\": \"http:\\/\\/runolfsson.org\\/nemo-quas-cupiditate-quia-aperiam-deleniti-itaque\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/users/1"
+    "http://localhost/api/users/11"
 );
 
 const headers = {
@@ -4733,13 +4682,13 @@ const headers = {
 };
 
 let body = {
-    "first_name": "uxmoetgmdr",
-    "last_name": "ohefzwnzukszekskij",
-    "email": "daron89@example.net",
-    "password": "muW'#L\"hXag&gt;3NdLp",
-    "phone": "mjihhvpdxdnxwwg",
-    "address": "gvq",
-    "avatar_url": "http:\/\/dibbert.com\/eveniet-earum-corporis-tempora-cumque-et-libero-reiciendis"
+    "first_name": "rljdsozmusz",
+    "last_name": "ynnzjhlbqaiwddgxoe",
+    "email": "maximus.bogisich@example.com",
+    "password": "W'M`P'$ow3T@;%",
+    "phone": "gs",
+    "address": "izapnmfkrysoulsiei",
+    "avatar_url": "http:\/\/runolfsson.org\/nemo-quas-cupiditate-quia-aperiam-deleniti-itaque"
 };
 
 fetch(url, {
@@ -4843,10 +4792,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="PUTapi-users--id-"
-               value="1"
+               value="11"
                data-component="url">
     <br>
-<p>The ID of the user. Example: <code>1</code></p>
+<p>The ID of the user. Example: <code>11</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -4855,10 +4804,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="first_name"                data-endpoint="PUTapi-users--id-"
-               value="uxmoetgmdr"
+               value="rljdsozmusz"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>uxmoetgmdr</code></p>
+<p>Must not be greater than 255 characters. Example: <code>rljdsozmusz</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>last_name</code></b>&nbsp;&nbsp;
@@ -4866,10 +4815,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="last_name"                data-endpoint="PUTapi-users--id-"
-               value="ohefzwnzukszekskij"
+               value="ynnzjhlbqaiwddgxoe"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>ohefzwnzukszekskij</code></p>
+<p>Must not be greater than 255 characters. Example: <code>ynnzjhlbqaiwddgxoe</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -4877,10 +4826,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="PUTapi-users--id-"
-               value="daron89@example.net"
+               value="maximus.bogisich@example.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Must not be greater than 255 characters. Example: <code>daron89@example.net</code></p>
+<p>Must be a valid email address. Must not be greater than 255 characters. Example: <code>maximus.bogisich@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -4888,10 +4837,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="PUTapi-users--id-"
-               value="muW'#L"hXag>3NdLp"
+               value="W'M`P'$ow3T@;%"
                data-component="body">
     <br>
-<p>Must be at least 8 characters. Example: <code>muW'#L"hXag&gt;3NdLp</code></p>
+<p>Must be at least 8 characters. Example: <code>W'M</code>P'$ow3T@;%`</p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
@@ -4899,10 +4848,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="phone"                data-endpoint="PUTapi-users--id-"
-               value="mjihhvpdxdnxwwg"
+               value="gs"
                data-component="body">
     <br>
-<p>Must not be greater than 20 characters. Example: <code>mjihhvpdxdnxwwg</code></p>
+<p>Must not be greater than 20 characters. Example: <code>gs</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>address</code></b>&nbsp;&nbsp;
@@ -4910,10 +4859,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="address"                data-endpoint="PUTapi-users--id-"
-               value="gvq"
+               value="izapnmfkrysoulsiei"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>gvq</code></p>
+<p>Must not be greater than 255 characters. Example: <code>izapnmfkrysoulsiei</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>avatar_url</code></b>&nbsp;&nbsp;
@@ -4921,10 +4870,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="avatar_url"                data-endpoint="PUTapi-users--id-"
-               value="http://dibbert.com/eveniet-earum-corporis-tempora-cumque-et-libero-reiciendis"
+               value="http://runolfsson.org/nemo-quas-cupiditate-quia-aperiam-deleniti-itaque"
                data-component="body">
     <br>
-<p>Must be a valid URL. Example: <code>http://dibbert.com/eveniet-earum-corporis-tempora-cumque-et-libero-reiciendis</code></p>
+<p>Must be a valid URL. Example: <code>http://runolfsson.org/nemo-quas-cupiditate-quia-aperiam-deleniti-itaque</code></p>
         </div>
         </form>
 
@@ -4941,14 +4890,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/users/1" \
+    "http://localhost/api/users/11" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/users/1"
+    "http://localhost/api/users/11"
 );
 
 const headers = {
@@ -5041,10 +4990,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="DELETEapi-users--id-"
-               value="1"
+               value="11"
                data-component="url">
     <br>
-<p>The ID of the user. Example: <code>1</code></p>
+<p>The ID of the user. Example: <code>11</code></p>
             </div>
                     </form>
 
@@ -5194,7 +5143,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/workspaces/recusandae/users" \
+    --get "http://localhost/api/workspaces/non/users" \
     --header "Authorization: Bearer {YOUR_AUTH_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -5202,7 +5151,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/workspaces/recusandae/users"
+    "http://localhost/api/workspaces/non/users"
 );
 
 const headers = {
@@ -5314,10 +5263,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="workspace"                data-endpoint="GETapi-workspaces--workspace--users"
-               value="recusandae"
+               value="non"
                data-component="url">
     <br>
-<p>The workspace. Example: <code>recusandae</code></p>
+<p>The workspace. Example: <code>non</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>workspace_id</code></b>&nbsp;&nbsp;
@@ -5346,7 +5295,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/workspaces/dolorum/users" \
+    "http://localhost/api/workspaces/delectus/users" \
     --header "Authorization: Bearer {YOUR_AUTH_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -5359,7 +5308,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/workspaces/dolorum/users"
+    "http://localhost/api/workspaces/delectus/users"
 );
 
 const headers = {
@@ -5477,10 +5426,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="workspace"                data-endpoint="POSTapi-workspaces--workspace--users"
-               value="dolorum"
+               value="delectus"
                data-component="url">
     <br>
-<p>The workspace. Example: <code>dolorum</code></p>
+<p>The workspace. Example: <code>delectus</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>workspace_id</code></b>&nbsp;&nbsp;
@@ -5531,7 +5480,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PATCH \
-    "http://localhost/api/workspaces/ipsum/users/1" \
+    "http://localhost/api/workspaces/quisquam/users/11" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -5542,7 +5491,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/workspaces/ipsum/users/1"
+    "http://localhost/api/workspaces/quisquam/users/11"
 );
 
 const headers = {
@@ -5640,10 +5589,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="workspace"                data-endpoint="PATCHapi-workspaces--workspace--users--user-"
-               value="ipsum"
+               value="quisquam"
                data-component="url">
     <br>
-<p>The workspace. Example: <code>ipsum</code></p>
+<p>The workspace. Example: <code>quisquam</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>user</code></b>&nbsp;&nbsp;
@@ -5651,10 +5600,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="user"                data-endpoint="PATCHapi-workspaces--workspace--users--user-"
-               value="1"
+               value="11"
                data-component="url">
     <br>
-<p>The user. Example: <code>1</code></p>
+<p>The user. Example: <code>11</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -5686,7 +5635,7 @@ Must be one of:
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/workspaces/sunt/users/1" \
+    "http://localhost/api/workspaces/esse/users/11" \
     --header "Authorization: Bearer {YOUR_AUTH_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -5694,7 +5643,7 @@ Must be one of:
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/workspaces/sunt/users/1"
+    "http://localhost/api/workspaces/esse/users/11"
 );
 
 const headers = {
@@ -5805,10 +5754,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="workspace"                data-endpoint="DELETEapi-workspaces--workspace--users--user-"
-               value="sunt"
+               value="esse"
                data-component="url">
     <br>
-<p>The workspace. Example: <code>sunt</code></p>
+<p>The workspace. Example: <code>esse</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>user</code></b>&nbsp;&nbsp;
@@ -5816,10 +5765,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="user"                data-endpoint="DELETEapi-workspaces--workspace--users--user-"
-               value="1"
+               value="11"
                data-component="url">
     <br>
-<p>The user. Example: <code>1</code></p>
+<p>The user. Example: <code>11</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>workspace_id</code></b>&nbsp;&nbsp;
@@ -6028,8 +5977,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"name\": \"\\\"Nuevo Workspace\\\"\",
-    \"description\": \"Vitae explicabo quisquam aut odio doloremque in necessitatibus.\",
-    \"logo_url\": \"http:\\/\\/www.sipes.com\\/laborum-qui-non-est-dicta-voluptatem\"
+    \"description\": \"Hic et fugit consequuntur.\",
+    \"logo_url\": \"http:\\/\\/berge.biz\\/aut-voluptatum-ad-ipsam-maxime-iure-temporibus\"
 }"
 </code></pre></div>
 
@@ -6047,8 +5996,8 @@ const headers = {
 
 let body = {
     "name": "\"Nuevo Workspace\"",
-    "description": "Vitae explicabo quisquam aut odio doloremque in necessitatibus.",
-    "logo_url": "http:\/\/www.sipes.com\/laborum-qui-non-est-dicta-voluptatem"
+    "description": "Hic et fugit consequuntur.",
+    "logo_url": "http:\/\/berge.biz\/aut-voluptatum-ad-ipsam-maxime-iure-temporibus"
 };
 
 fetch(url, {
@@ -6166,10 +6115,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="POSTapi-workspaces"
-               value="Vitae explicabo quisquam aut odio doloremque in necessitatibus."
+               value="Hic et fugit consequuntur."
                data-component="body">
     <br>
-<p>Example: <code>Vitae explicabo quisquam aut odio doloremque in necessitatibus.</code></p>
+<p>Example: <code>Hic et fugit consequuntur.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logo_url</code></b>&nbsp;&nbsp;
@@ -6177,10 +6126,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="logo_url"                data-endpoint="POSTapi-workspaces"
-               value="http://www.sipes.com/laborum-qui-non-est-dicta-voluptatem"
+               value="http://berge.biz/aut-voluptatum-ad-ipsam-maxime-iure-temporibus"
                data-component="body">
     <br>
-<p>Must be a valid URL. Example: <code>http://www.sipes.com/laborum-qui-non-est-dicta-voluptatem</code></p>
+<p>Must be a valid URL. Example: <code>http://berge.biz/aut-voluptatum-ad-ipsam-maxime-iure-temporibus</code></p>
         </div>
         </form>
 
@@ -6345,8 +6294,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"name\": \"\\\"Workspace Actualizado\\\"\",
-    \"description\": \"Iusto animi ab expedita.\",
-    \"logo_url\": \"https:\\/\\/www.wiegand.com\\/temporibus-dolor-earum-at-magni\"
+    \"description\": \"Omnis eaque eum et aut libero molestiae.\",
+    \"logo_url\": \"http:\\/\\/quitzon.com\\/omnis-in-et-nisi-et-vero-repellendus\"
 }"
 </code></pre></div>
 
@@ -6364,8 +6313,8 @@ const headers = {
 
 let body = {
     "name": "\"Workspace Actualizado\"",
-    "description": "Iusto animi ab expedita.",
-    "logo_url": "https:\/\/www.wiegand.com\/temporibus-dolor-earum-at-magni"
+    "description": "Omnis eaque eum et aut libero molestiae.",
+    "logo_url": "http:\/\/quitzon.com\/omnis-in-et-nisi-et-vero-repellendus"
 };
 
 fetch(url, {
@@ -6499,10 +6448,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="description"                data-endpoint="PUTapi-workspaces--id-"
-               value="Iusto animi ab expedita."
+               value="Omnis eaque eum et aut libero molestiae."
                data-component="body">
     <br>
-<p>Example: <code>Iusto animi ab expedita.</code></p>
+<p>Example: <code>Omnis eaque eum et aut libero molestiae.</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logo_url</code></b>&nbsp;&nbsp;
@@ -6510,10 +6459,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="logo_url"                data-endpoint="PUTapi-workspaces--id-"
-               value="https://www.wiegand.com/temporibus-dolor-earum-at-magni"
+               value="http://quitzon.com/omnis-in-et-nisi-et-vero-repellendus"
                data-component="body">
     <br>
-<p>Must be a valid URL. Example: <code>https://www.wiegand.com/temporibus-dolor-earum-at-magni</code></p>
+<p>Must be a valid URL. Example: <code>http://quitzon.com/omnis-in-et-nisi-et-vero-repellendus</code></p>
         </div>
         </form>
 
