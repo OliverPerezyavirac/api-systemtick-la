@@ -1,66 +1,113 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# API SystemTick LA
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Sistema de gestión de tickets y colaboración para equipos y organizaciones, desarrollado en Laravel.
 
-## About Laravel
+## Descripción
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**SystemTick LA** es una API robusta para la gestión de tickets, usuarios, departamentos, workspaces, notificaciones y más. Permite la colaboración eficiente en equipos, seguimiento de incidencias y administración de permisos y roles.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Características principales
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Gestión de tickets con asignación, comentarios, etiquetas y estados.
+- Organización por departamentos y workspaces.
+- Roles y permisos granulares para usuarios.
+- Notificaciones y sistema de invitaciones.
+- Configuración personalizada de vistas y preferencias de usuario.
+- API RESTful documentada y segura (Laravel Sanctum).
+- Arquitectura modular y escalable.
 
-## Learning Laravel
+## Estructura de carpetas
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```
+app/
+  Http/Controllers/         # Controladores agrupados por dominio (Users, Tickets, Workspaces, etc.)
+  Models/                   # Modelos Eloquent agrupados por dominio
+  ...
+config/                     # Configuración de la aplicación
+routes/                     # Definición de rutas (api.php)
+database/                   # Migraciones, seeders y factories
+lang/                       # Archivos de localización (es, en)
+public/                     # Archivos públicos y documentación de la API
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Requisitos
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- PHP >= 8.1
+- Composer
+- MySQL/MariaDB u otro motor compatible
+- Node.js y npm (para assets opcionales)
 
-## Laravel Sponsors
+## Instalación
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+1. Clona el repositorio:
+   ```bash
+   git clone <url-del-repo>
+   cd api-systemtick-la
+   ```
+2. Instala dependencias PHP:
+   ```bash
+   composer install
+   ```
+3. Copia y configura el archivo `.env`:
+   ```bash
+   cp .env.example .env
+   # Edita las variables de entorno según tu entorno local
+   ```
+4. Genera la clave de la aplicación:
+   ```bash
+   php artisan key:generate
+   ```
+5. Ejecuta las migraciones y seeders:
+   ```bash
+   php artisan migrate --seed
+   ```
+6. (Opcional) Instala dependencias frontend:
+   ```bash
+   npm install && npm run build
+   ```
 
-### Premium Partners
+## Uso
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+- Levanta el servidor de desarrollo:
+  ```bash
+  php artisan serve
+  ```
+- La API estará disponible en `http://localhost:8000`
+- La documentación de la API está disponible en `public/docs/index.html`
 
-## Contributing
+## Comandos útiles
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- Ejecutar pruebas:
+  ```bash
+  php artisan test
+  ```
+- Generar documentación de la API:
+  ```bash
+  php artisan scribe:generate
+  ```
 
-## Code of Conduct
+## Estructura de la API
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- Autenticación: Sanctum (token)
+- Endpoints principales:
+  - `/login`, `/logout`, `/users`, `/profile`
+  - `/workspaces`, `/departments`, `/tickets`, `/comments`, `/tags`, `/notifications`
+  - `/workspaces/{id}/permissions`, `/workspaces/{workspace}/users`, `/workspaces/{workspace}/invite`
+  - `/workspaces/{workspace}/tickets`, `/tickets/{ticket}/tags`, etc.
+- Consultar `routes/api.php` y la documentación generada para detalles de cada endpoint.
 
-## Security Vulnerabilities
+## Localización
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Mensajes y validaciones disponibles en español y en inglés (`lang/es`, `lang/en`).
 
-## License
+## Contribución
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+¡Las contribuciones son bienvenidas! Por favor, abre un issue o pull request para sugerencias, mejoras o reportes de bugs.
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT.
+
+---
+
+**Desarrollado con Laravel**

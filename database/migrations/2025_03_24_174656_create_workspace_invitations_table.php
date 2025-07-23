@@ -23,7 +23,11 @@ return new class extends Migration
             $table->unique(['workspace_id', 'email']);
 
             // Relaciones
+            // Unique constraint for workspace_id and email
+            $table->unique(['workspace_id', 'email']);
+            // Foreign key for workspace_id
             $table->foreign('workspace_id')->references('id')->on('workspaces')->onDelete('cascade');
+            // Foreign key for invited_by
             $table->foreign('invited_by')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });

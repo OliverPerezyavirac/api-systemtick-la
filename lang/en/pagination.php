@@ -13,6 +13,7 @@ return [
     |
     */
 
+    // Messages for pagination
     'previous' => '&laquo; Previous',
     'next' => 'Next &raquo;',
 

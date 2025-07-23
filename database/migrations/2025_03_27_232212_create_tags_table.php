@@ -15,11 +15,13 @@ class CreateTagsTable extends Migration
     {
         Schema::create('tags', function (Blueprint $table) {
             $table->id();
+            // Foreign key for workspace_id
             $table->foreignId('workspace_id')->constrained()->onDelete('cascade');
             $table->string('name');
             $table->string('color');
             $table->timestamps();
 
+            // Unique constraint for workspace_id and name
             $table->unique(['workspace_id', 'name']);
         });
     }

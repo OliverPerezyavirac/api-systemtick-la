@@ -22,7 +22,9 @@ return new class extends Migration
             $table->timestamps();
 
             // Relaciones
+            // Foreign key for ticket_id
             $table->foreign('ticket_id')->references('id')->on('tickets')->onDelete('cascade');
+            // Foreign key for user_id
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }

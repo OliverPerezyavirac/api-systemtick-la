@@ -15,7 +15,9 @@ class CreateTicketTagsTable extends Migration
     {
         Schema::create('ticket_tags', function (Blueprint $table) {
             $table->id();
+            // Foreign key for ticket_id
             $table->foreignId('ticket_id')->constrained()->onDelete('cascade');
+            // Foreign key for tag_id
             $table->foreignId('tag_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });

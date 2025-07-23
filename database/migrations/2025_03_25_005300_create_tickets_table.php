@@ -26,8 +26,11 @@ return new class extends Migration
             $table->dateTime('closed_at')->nullable();
 
             // Relaciones
+            // Foreign key for workspace_id
             $table->foreign('workspace_id')->references('id')->on('workspaces')->onDelete('cascade');
+            // Foreign key for creator_id
             $table->foreign('creator_id')->references('id')->on('users');
+            // Foreign key for assignee_id
             $table->foreign('assignee_id')->references('id')->on('users')->onDelete('set null');
             $table->timestamps();
         });
