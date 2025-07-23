@@ -2,9 +2,9 @@
 
 namespace App\Policies;
 
-use App\Models\Comment;
-use App\Models\User;
-use App\Models\Ticket;
+use App\Models\Comments\Comment;
+use App\Models\Users\User;
+use App\Models\Tickets\Ticket;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class CommentPolicy

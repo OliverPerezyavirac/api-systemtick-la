@@ -22,8 +22,11 @@ return new class extends Migration
             $table->timestamp('joined_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             
             //Relaciones
+            // Unique constraint for workspace_id and user_id
             $table->unique(['workspace_id', 'user_id']);
+            // Foreign key for workspace_id
             $table->foreign('workspace_id')->references('id')->on('workspaces')->onDelete('cascade');
+            // Foreign key for user_id
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });

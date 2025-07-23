@@ -2,6 +2,17 @@
 
 return [
 
+    /*
+    |--------------------------------------------------------------------------
+    | Messages Language Lines
+    |--------------------------------------------------------------------------
+    |
+    | The following language lines are used during the application for various
+    | messages that we need to display to the user. You are free to modify
+    | these language lines according to your application's requirements.
+    |
+    */
+
     // Messages for users
     'error_fetching_users' => 'Error fetching users.',
     'user_created' => 'User created successfully.',
