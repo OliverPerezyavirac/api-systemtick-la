@@ -4,14 +4,15 @@ namespace App\Http\Controllers\WorkspacesUsers;
 
 use Illuminate\Http\Request;
 use App\Models\Workspaces\WorkspaceUser;
-use App\Http\Requests\StoreWorkspaceUserRequest;
-use App\Http\Requests\UpdateWorkspaceUserRequest;
+use App\Http\Requests\WorkspacesUsers\StoreWorkspaceUserRequest;
+use App\Http\Requests\WorkspacesUsers\UpdateWorkspaceUserRequest;
 use App\Models\Workspaces\Workspace;
 use App\Models\Users\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Notifications\WorkspaceInvitationNotification;
 use Illuminate\Http\Response;
+use App\Http\Controllers\Controller;
 
 /**
  * @group Usuarios del Workspace

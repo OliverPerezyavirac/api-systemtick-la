@@ -6,6 +6,7 @@ use App\Models\Departments\Department;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Response;
+use App\Http\Controllers\Controller;
 
 class DepartmentDetailController extends Controller
 {

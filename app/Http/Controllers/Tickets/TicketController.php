@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Tickets;
 
 use Illuminate\Http\Request;
 use App\Models\Tickets\Ticket;
-use App\Http\Requests\StoreTicketRequest;
-use App\Http\Requests\UpdateTicketRequest;
+use App\Http\Requests\Tickets\StoreTicketRequest;
+use App\Http\Requests\Tickets\UpdateTicketRequest;
 use Illuminate\Support\Facades\Auth;
 use App\Events\TicketAssigned;
 use App\Models\Users\User;
@@ -13,6 +13,7 @@ use App\Models\Workspaces\Workspace;
 use App\Models\Tickets\TicketStatus;
 use App\Services\ClaudeService;
 use Illuminate\Http\Response;
+use App\Http\Controllers\Controller;
 
 /**
  * @group Tickets

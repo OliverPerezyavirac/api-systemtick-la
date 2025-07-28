@@ -4,11 +4,12 @@ namespace App\Http\Controllers\Workspaces;
 
 use Illuminate\Http\Request;
 use App\Models\Workspaces\Workspace;
-use App\Http\Requests\Workspace\StoreWorkspaceRequest;
-use App\Http\Requests\Workspace\UpdateWorkspaceRequest;
+use App\Http\Requests\Workspaces\StoreWorkspaceRequest;
+use App\Http\Requests\Workspaces\UpdateWorkspaceRequest;
 use App\Models\Workspaces\WorkspaceUser;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Response;
+use App\Http\Controllers\Controller;
 
 /**
  * @group Workspaces

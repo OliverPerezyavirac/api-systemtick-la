@@ -4,10 +4,11 @@ namespace App\Http\Controllers\Users;
 
 use Illuminate\Http\Request;
 use App\Models\Users\User;
-use App\Http\Requests\User\StoreUserRequest;
-use App\Http\Requests\User\UpdateUserRequest;
+use App\Http\Requests\Users\StoreUserRequest;
+use App\Http\Requests\Users\UpdateUserRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Response;
+use App\Http\Controllers\Controller;
 
 /**
  * @group Usuarios

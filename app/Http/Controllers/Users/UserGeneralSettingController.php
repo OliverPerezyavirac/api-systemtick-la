@@ -6,6 +6,7 @@ use App\Models\Users\UserGeneralSetting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Response;
+use App\Http\Controllers\Controller;
 
 class UserGeneralSettingController extends Controller
 {

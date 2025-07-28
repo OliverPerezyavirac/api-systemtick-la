@@ -5,10 +5,11 @@ namespace App\Http\Controllers\Comments;
 use Illuminate\Http\Request;
 use App\Models\Comments\Comment;
 use App\Models\Tickets\Ticket;
-use App\Http\Requests\StoreCommentRequest;
+use App\Http\Requests\Comments\StoreCommentRequest;
 use Illuminate\Support\Facades\Auth;
 use App\Notifications\TicketCommentNotification;
 use Illuminate\Http\Response;
+use App\Http\Controllers\Controller;
 
 /**
  * @group Comentarios
@@ -166,7 +167,7 @@ class CommentController extends Controller
      * Check if the user can view private comments.
      *
      * @param  \App\Models\Ticket  $ticket
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Users\User  $user
      * @return bool
      */
     private function canViewPrivateComments($ticket, $user)

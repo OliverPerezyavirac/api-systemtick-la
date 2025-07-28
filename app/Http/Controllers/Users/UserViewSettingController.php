@@ -7,6 +7,7 @@ use App\Models\Workspaces\Workspace;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Response;
+use App\Http\Controllers\Controller;
 
 class UserViewSettingController extends Controller
 {

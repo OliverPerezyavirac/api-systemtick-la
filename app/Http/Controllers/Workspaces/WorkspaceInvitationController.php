@@ -8,6 +8,7 @@ use App\Models\Workspaces\WorkspaceUser;
 use App\Http\Requests\InviteUserRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Response;
+use App\Http\Controllers\Controller;
 
 /**
  * @group Invitaciones del Workspace
