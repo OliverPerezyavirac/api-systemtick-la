@@ -177,4 +177,11 @@ return [
     'view_setting_deleted' => 'Configuración eliminada correctamente.',
     'view_setting_not_found' => 'No se encontró la configuración.',
     
+    // Mensajes para políticas de tickets
+    'unauthorized_update_ticket' => 'No tienes permisos para actualizar este ticket.',
+    'unauthorized_update_title' => 'No tienes permisos para cambiar el título del ticket.',
+    'unauthorized_delete_ticket' => 'No tienes permisos para eliminar este ticket.',
+    'unauthorized_assign_ticket' => 'No tienes permisos para asignar este ticket.',
+    'unauthorized_change_status' => 'No tienes permisos para cambiar el estado de este ticket.',
+    
 ];

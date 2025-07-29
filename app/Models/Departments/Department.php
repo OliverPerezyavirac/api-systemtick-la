@@ -4,6 +4,9 @@ namespace App\Models\Departments;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Users\User;
+use App\Models\Workspaces\Workspace;
+use App\Models\Tickets\Ticket;
 
 class Department extends Model
 {

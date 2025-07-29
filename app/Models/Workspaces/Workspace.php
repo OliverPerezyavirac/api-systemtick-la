@@ -4,6 +4,8 @@ namespace App\Models\Workspaces;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Users\User;
+use App\Models\Departments\Department;
 
 class Workspace extends Model
 {

@@ -4,6 +4,8 @@ namespace App\Models\Comments;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Tickets\Ticket;
+use App\Models\Users\User;
 
 class Comment extends Model
 {

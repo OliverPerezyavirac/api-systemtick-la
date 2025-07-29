@@ -4,6 +4,10 @@ namespace App\Models\Tickets;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Workspaces\Workspace;
+use App\Models\Users\User;
+use App\Models\Departments\Department;
+use App\Models\Comments\Comment;
 
 class Ticket extends Model
 {

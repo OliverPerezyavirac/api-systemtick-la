@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Tickets\Ticket;
+use App\Models\Workspaces\Workspace;
+use App\Models\Departments\Department;
+use App\Models\Users\UserViewSetting;
+use App\Models\Users\UserGeneralSetting;
 
 class User extends Authenticatable
 {

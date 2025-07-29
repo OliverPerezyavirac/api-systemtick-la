@@ -156,10 +156,20 @@ class TicketController extends Controller
         $ticket = Ticket::where('workspace_id', $workspaceId)->findOrFail($ticketId);
         $user = Auth::user();
 
-        if (!$user->hasWorkspaceRole($workspaceId, ['admin', 'manager'])) {
+        // Verificar si el usuario puede actualizar el ticket
+        if (!$this->authorize('update', $ticket)) {
             return response()->json([
-                'message' => __('messages.only_admin_manager_update_ticket')
+                'message' => __('messages.unauthorized_update_ticket')
             ], Response::HTTP_FORBIDDEN);
+        }
+
+        // Si el usuario está intentando cambiar el título, verificar permisos específicos
+        if ($request->has('title') && $request->title !== $ticket->title) {
+            if (!$this->authorize('updateTitle', $ticket)) {
+                return response()->json([
+                    'message' => __('messages.unauthorized_update_title')
+                ], Response::HTTP_FORBIDDEN);
+            }
         }
 
         if ($request->has('status') && $request->status !== $ticket->status) {
@@ -191,9 +201,9 @@ class TicketController extends Controller
         $ticket = Ticket::where('workspace_id', $workspaceId)->findOrFail($ticketId);
         $user = Auth::user();
 
-        if (!$user->hasWorkspaceRole($workspaceId, ['admin', 'manager'])) {
+        if (!$this->authorize('delete', $ticket)) {
             return response()->json([
-                'message' => __('messages.only_admin_manager_delete_ticket')
+                'message' => __('messages.unauthorized_delete_ticket')
             ], Response::HTTP_FORBIDDEN);
         }
 
@@ -215,9 +225,9 @@ class TicketController extends Controller
         $ticket = Ticket::where('workspace_id', $workspaceId)->findOrFail($ticketId);
         $user = Auth::user();
 
-        if (!$user->hasWorkspaceRole($workspaceId, ['admin', 'manager'])) {
+        if (!$this->authorize('assign', $ticket)) {
             return response()->json([
-                'message' => __('messages.only_admin_manager_assign_ticket')
+                'message' => __('messages.unauthorized_assign_ticket')
             ], Response::HTTP_FORBIDDEN);
         }
 
@@ -257,11 +267,9 @@ class TicketController extends Controller
         $ticket = Ticket::where('workspace_id', $workspaceId)->findOrFail($ticketId);
         $user = Auth::user();
 
-        if ($ticket->creator_id !== $user->id && 
-            $ticket->assignee_id !== $user->id && 
-            !$user->hasWorkspaceRole($workspaceId, ['admin', 'manager'])) {
+        if (!$this->authorize('changeStatus', $ticket)) {
             return response()->json([
-                'message' => __('messages.only_creator_assignee_admin_change_status')
+                'message' => __('messages.unauthorized_change_status')
             ], Response::HTTP_FORBIDDEN);
         }
         
