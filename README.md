@@ -41,7 +41,7 @@ public/                     # Archivos públicos y documentación de la API
 
 1. Clona el repositorio:
    ```bash
-   git clone <url-del-repo>
+   git clone https://github.com/OliverPerezyavirac/api-systemtick-la.git
    cd api-systemtick-la
    ```
 2. Instala dependencias PHP:
